@@ -1,0 +1,16 @@
+.link {
+  position: relative;
+  background-color: inherit;
+  font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
+  margin-bottom: 30px; }
+  .link:before {
+    position: absolute;
+    content: '';
+    background: url(../../assets/meander.svg) no-repeat center;
+    background-size: 100% 100%;
+    width: 24px;
+    height: 20px;
+    top: -5px;
+    left: -34px; }
+  .link:last-of-type {
+    margin-bottom: 0; }

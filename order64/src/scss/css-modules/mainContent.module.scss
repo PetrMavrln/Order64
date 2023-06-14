@@ -1,0 +1,110 @@
+@import '../variables';
+
+.wrapper {
+  max-width: 1270px + $contMargin;
+  margin: 0 auto;
+}
+
+.container {
+  position: relative;
+  margin: 0 $contMargin;
+  display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  justify-content: space-between;
+
+  //   @media (max-width: 1180px) {
+  //     display: flex;
+  //     flex-direction: column;
+  //     align-items: center;
+  //   }
+
+  .leftPanel {
+    width: 329px;
+    height: 1306px;
+    margin-top: 7px;
+
+    // @media (max-width: 1250px) {
+    //   display: none;
+    // }
+    @media (max-width: 1250px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    @media (max-width: 660px) {
+      display: none;
+    }
+  }
+
+  .content {
+    margin: 0 auto;
+    width: 635px;
+    height: 1315px;
+    // min-width: 308px;
+    // max-width: 635px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e2e2e2;
+    z-index: 99;
+
+    .textBlock1 {
+      background-color: inherit;
+    }
+
+    .header {
+      max-width: 316px;
+      margin: 0 auto 30px auto;
+      text-align: center;
+      font-size: clamp(1.05rem, calc(0.2rem + 1.3vw), 1.25rem);
+      background-color: inherit;
+    }
+
+    p {
+      font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
+      padding: 0 20px;
+      background-color: inherit;
+    }
+
+    .orderLinks {
+      background-color: inherit;
+    }
+
+    .orderContacts {
+      background-color: inherit;
+    }
+
+    .orderContactsHeader {
+      background-color: inherit;
+      font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .contactNumber {
+      background-color: inherit;
+    }
+  }
+
+  .rightPanel {
+    width: 329px;
+    height: 1306px;
+    margin-top: 6px;
+
+    // @media (max-width: 1250px) {
+    //   display: none;
+    // }
+
+    @media (max-width: 1250px) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+    @media (max-width: 660px) {
+      display: none;
+    }
+  }
+}
