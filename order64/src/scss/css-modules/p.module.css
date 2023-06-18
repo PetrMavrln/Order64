@@ -5,14 +5,13 @@
   font-weight: 300;
   background-color: inherit;
   font-family: 'Roboto Slab', Tahoma, serif; }
-
-.bold {
-  display: inline;
-  position: relative;
-  font-weight: bold;
-  background-color: inherit; }
-  .bold:before {
-    content: url(../../assets/meander.svg);
-    position: absolute;
-    top: 2px;
-    left: -14px; }
+  .paragraph .bold {
+    display: inline;
+    position: relative;
+    font-weight: bold;
+    background-color: inherit; }
+    .paragraph .bold:before {
+      content: url(../../assets/meander.svg);
+      position: absolute;
+      top: 2px;
+      left: -14px; }

@@ -1,8 +1,21 @@
 .link {
   position: relative;
+  display: inline-block;
   background-color: inherit;
   font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
   margin-bottom: 30px;
+  // border: 1px solid black;
+  width: fit-content;
+
+  &:hover {
+    cursor: pointer;
+    // text-shadow: 0px 0px 15px rgba(206, 89, 55, 0.75);
+
+    &::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
 
   &:before {
     position: absolute;
@@ -13,6 +26,19 @@
     height: 20px;
     top: -5px;
     left: -34px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #877065;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
   }
 
   &:last-of-type {

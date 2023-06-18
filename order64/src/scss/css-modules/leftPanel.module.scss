@@ -1,0 +1,18 @@
+.leftPanel {
+  width: 329px;
+  height: 1306px;
+  margin-top: 7px;
+
+  // @media (max-width: 1250px) {
+  //   display: none;
+  // }
+  @media (max-width: 1250px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  @media (max-width: 660px) {
+    display: none;
+  }
+}

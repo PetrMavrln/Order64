@@ -1,16 +1,12 @@
-import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import AppRouter from './components/AppRouter';
 import './scss/App.css';
-import HeaderComponent from './components/HeaderComponent';
-import MainContentComponent from './components/MainContentComponent';
-import FooterComponent from './components/FooterComponent';
 
 function App() {
   return (
-    <>
-      <HeaderComponent />
-      <MainContentComponent />
-      <FooterComponent />
-    </>
+    <BrowserRouter>
+      <AppRouter />
+    </BrowserRouter>
   );
 }
 

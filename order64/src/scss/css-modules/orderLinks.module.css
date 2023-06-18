@@ -1,0 +1,4 @@
+.orderLinks {
+  display: flex;
+  flex-direction: column;
+  background-color: inherit; }

@@ -19,25 +19,6 @@
   //     align-items: center;
   //   }
 
-  .leftPanel {
-    width: 329px;
-    height: 1306px;
-    margin-top: 7px;
-
-    // @media (max-width: 1250px) {
-    //   display: none;
-    // }
-    @media (max-width: 1250px) {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
-    }
-    @media (max-width: 660px) {
-      display: none;
-    }
-  }
-
   .content {
     margin: 0 auto;
     width: 635px;
@@ -66,45 +47,6 @@
       font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
       padding: 0 20px;
       background-color: inherit;
-    }
-
-    .orderLinks {
-      background-color: inherit;
-    }
-
-    .orderContacts {
-      background-color: inherit;
-    }
-
-    .orderContactsHeader {
-      background-color: inherit;
-      font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .contactNumber {
-      background-color: inherit;
-    }
-  }
-
-  .rightPanel {
-    width: 329px;
-    height: 1306px;
-    margin-top: 6px;
-
-    // @media (max-width: 1250px) {
-    //   display: none;
-    // }
-
-    @media (max-width: 1250px) {
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: 1;
-    }
-
-    @media (max-width: 660px) {
-      display: none;
     }
   }
 }

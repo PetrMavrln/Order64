@@ -1,0 +1,13 @@
+.rightPanel {
+  width: 329px;
+  height: 1306px;
+  margin-top: 6px; }
+  @media (max-width: 1250px) {
+    .rightPanel {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1; } }
+  @media (max-width: 660px) {
+    .rightPanel {
+      display: none; } }
