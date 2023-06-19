@@ -3,12 +3,14 @@ import Entablature from './pages/Entablature';
 import Main from './pages/Main';
 import Orders from './pages/Orders';
 import Payment from './pages/Payment';
+import Stucco from './pages/Stucco';
 import {
   ASSORTMENT_ROUTE,
   ENTABLATURE_ROUTE,
   MAIN_ROUTE,
   ORDERS_ROUTE,
   PAYMENT_ROUTE,
+  STUCCO_ROUTE,
 } from './utils/consts';
 
 export const publicRoutes = [
@@ -17,4 +19,5 @@ export const publicRoutes = [
   { path: ENTABLATURE_ROUTE, Component: Entablature },
   { path: ORDERS_ROUTE, Component: Orders },
   { path: PAYMENT_ROUTE, Component: Payment },
+  { path: STUCCO_ROUTE, Component: Stucco },
 ];

@@ -5,9 +5,10 @@ import OrderLinkItemComponent from './OrderLinkItemComponent';
 const OrderLinksComponent = () => {
   const orderLinks = [
     { id: 0, title: 'Архитектурные ордера и их различие', route: '/orders' },
-    { id: 1, title: 'Антаблемент', route: '/entablature' },
-    { id: 2, title: 'Ассортимент колонн и цены.', route: '/assortment' },
-    { id: 3, title: 'Доставка, оплата.', route: '/payment' },
+    // { id: 1, title: 'Антаблемент', route: '/entablature' },
+    { id: 1, title: 'Ассортимент колонн и цены', route: '/assortment' },
+    { id: 2, title: 'Лепнина интерьерная', route: '/stucco' },
+    { id: 3, title: 'Доставка, оплата', route: '/payment' },
   ];
 
   return (

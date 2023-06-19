@@ -12,11 +12,12 @@
   // flex-direction: column;
   // align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 
   .content {
     margin: 0 auto;
     width: 635px;
-    height: 1315px;
+    // height: 1315px;
     // min-width: 308px;
     // max-width: 635px;
     display: flex;

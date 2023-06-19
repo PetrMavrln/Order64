@@ -59,3 +59,12 @@
       color: inherit;
       text-decoration: none;
       margin-top: 5px; }
+      @media (max-width: 1200px) {
+        .container .contacts .phone,
+        .container .contacts .mail {
+          margin-left: 5px; } }
+      @media (max-width: 950px) {
+        .container .contacts .phone,
+        .container .contacts .mail {
+          margin-left: 0;
+          margin-right: 5px; } }
