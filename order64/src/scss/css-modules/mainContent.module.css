@@ -8,6 +8,7 @@
   display: flex;
   justify-content: space-between; }
   .container .content {
+    font-family: 'Roboto Slab', Tahoma, serif;
     margin: 0 auto;
     width: 635px;
     height: 1315px;
@@ -16,15 +17,3 @@
     align-items: center;
     background-color: #e2e2e2;
     z-index: 99; }
-    .container .content .textBlock1 {
-      background-color: inherit; }
-    .container .content .header {
-      max-width: 316px;
-      margin: 0 auto 30px auto;
-      text-align: center;
-      font-size: clamp(1.05rem, calc(0.2rem + 1.3vw), 1.25rem);
-      background-color: inherit; }
-    .container .content p {
-      font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
-      padding: 0 20px;
-      background-color: inherit; }

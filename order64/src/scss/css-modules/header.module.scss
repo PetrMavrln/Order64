@@ -17,9 +17,10 @@
   justify-content: space-around;
 
   @media (max-width: 950px) {
-    display: flex;
+    // display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-end;
   }
 
   .logo {
@@ -37,8 +38,12 @@
     @media (max-width: 950px) {
       margin-top: 0;
       margin-right: 0;
-      background-color: rgba(255, 255, 255, 0.5);
-      box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.5);
+      transform: scale(1.35);
+      filter: brightness(100) saturate(100%);
+      // invert(99%) sepia(2%) saturate(702%) hue-rotate(239deg)
+      //   brightness(114%) contrast(77%);
+      // background-color: rgba(255, 255, 255, 0.5);
+      // box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.5);
     }
   }
 
@@ -56,9 +61,11 @@
     //   font-size: 1.5rem;
     // }
     @media (max-width: 950px) {
+      margin-top: 0;
       margin-bottom: 0;
       align-self: center;
-      text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+      display: none;
+      // text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
     }
   }
 
@@ -75,9 +82,10 @@
     //   font-size: 1rem;
     // }
     @media (max-width: 950px) {
-      margin-top: 0;
+      margin-top: 80px;
+      margin-bottom: -22px;
       text-align: center;
-      text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+      // text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
     }
 
     .phone,
