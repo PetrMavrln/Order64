@@ -1,7 +1,5 @@
-import React from 'react';
-import styles from '../scss/css-modules/modal.module.css';
-import { RiCloseLine } from 'react-icons/ri';
 import { IAssortmentItem } from '../models/IAssortmentItem';
+import styles from '../scss/css-modules/modal.module.css';
 
 const ModalComponent = ({ setIsOpen, card }: { setIsOpen: any; card: IAssortmentItem }) => {
   const image = require(`../assets/assortment/${card.img}`);
@@ -11,9 +9,7 @@ const ModalComponent = ({ setIsOpen, card }: { setIsOpen: any; card: IAssortment
       <div className={styles.darkBG} onClick={() => setIsOpen(false)} />
       <div className={styles.centered}>
         <div className={styles.modal}>
-          <button className={styles.closeBtn} onClick={() => setIsOpen(false)}>
-            <RiCloseLine style={{ marginBottom: '-3px' }} />
-          </button>
+          <button className={styles.closeBtn} onClick={() => setIsOpen(false)}></button>
           <div className={styles.modalContent}>
             <div className={styles.imgContainer}>
               <img src={image} className={styles.img} alt="Рисунок изделия" />

@@ -26,7 +26,17 @@ const Stucco = () => {
           <LeftPanelComponent />
           <div className={styles.content}>
             <ThematicBreakComponent />
-            Лепнина интерьерная
+            <div className={styles.header}>Лепнина интерьерная</div>
+            <div className={styles.linkDiv}>
+              Подробнее по
+              <a
+                className={styles.link}
+                href="https://order64.ru/"
+                target="_blank"
+                rel="noreferrer">
+                ссылке
+              </a>
+            </div>
             <ThematicBreakComponent />
           </div>
           <RightPanelComponent />

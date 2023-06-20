@@ -1,23 +1,22 @@
-.textBlock {
-  background-color: inherit;
-  .header {
-    max-width: 316px;
-    margin: 0 auto 30px auto;
-    text-align: center;
-    font-size: clamp(1.05rem, calc(0.2rem + 1.3vw), 1.25rem);
-    background-color: inherit;
-    // font-family: 'Roboto Slab', Tahoma, serif;
-    font-family: Montserrat, Roboto, system-ui, Tahoma, sans-serif;
+.header {
+  max-width: 316px;
+  margin: 0 auto 30px auto;
+  text-align: center;
+  font-size: clamp(1.05rem, calc(0.2rem + 1.3vw), 1.25rem);
+  font-family: Montserrat, Roboto, system-ui, Tahoma, sans-serif;
 
-    @media (max-width: 620px) {
-      margin-bottom: 15px;
-    }
+  @media (max-width: 620px) {
+    margin-bottom: 15px;
   }
+}
 
-  p {
-    font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
-    padding: 0 20px;
-    background-color: inherit;
-    // font-weight: 300;
+.paragraph {
+  font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
+  padding: 0 20px;
+  padding-bottom: 10px;
+
+  &:last-of-type {
+    padding-top: 10px;
+    padding-bottom: 0;
   }
 }

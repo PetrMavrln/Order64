@@ -2,12 +2,13 @@
   padding: 0 20px;
   max-width: 539px;
   font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
-  background-color: inherit; }
+  padding-bottom: 10px; }
+  .paragraph:nth-child(6) {
+    padding-bottom: 0; }
   .paragraph .bold {
     display: inline;
     position: relative;
-    font-weight: bold;
-    background-color: inherit; }
+    font-weight: bold; }
     .paragraph .bold:before {
       content: url(../../assets/meander.svg);
       position: absolute;

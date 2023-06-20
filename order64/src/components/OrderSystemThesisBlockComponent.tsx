@@ -23,22 +23,19 @@ const OrderSystemThesisBlockComponent = () => {
   ];
 
   return (
-    <div className={styles.textBlock}>
+    <div>
       <div className={styles.header}>Ордерная система - главное наследие античности</div>
       <PComponent order={orderSystem[0]} />
-      <br />
-      <p>Давайте посмотрим, как ордер помогает нам воспринимать здание.</p>
-      <br />
+      <div className={styles.paragraph}>
+        Давайте посмотрим, как ордер помогает нам воспринимать здание.
+      </div>
       <PComponent order={orderSystem[1]} />
-      <br />
       <PComponent order={orderSystem[2]} />
-      <br />
       <PComponent order={orderSystem[3]} />
-      <br />
-      <p>
+      <div className={styles.paragraph}>
         ст. Дмитрий Беззубцев <br />
         Историк архитектуры.
-      </p>
+      </div>
     </div>
   );
 };

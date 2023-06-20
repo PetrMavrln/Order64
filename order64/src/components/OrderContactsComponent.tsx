@@ -11,7 +11,7 @@ const OrderContactsComponent = () => {
   ];
 
   return (
-    <div className={styles.orderContacts}>
+    <div>
       <div className={styles.orderContactsHeader}>Проф. контакты</div>
       {orderContacts.map((contact: IOrderContacts) => (
         <div className={styles.contactNumber} key={contact.id}>
