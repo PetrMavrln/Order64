@@ -25,5 +25,10 @@
     align-items: center;
     background-color: #e2e2e2;
     z-index: 99;
+
+    .header {
+      font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
+      margin-bottom: 15px;
+    }
   }
 }

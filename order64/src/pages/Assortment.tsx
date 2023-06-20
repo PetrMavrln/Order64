@@ -1,11 +1,12 @@
-import React, { useEffect } from 'react';
-import HeaderComponent from '../components/HeaderComponent';
-import FooterComponent from '../components/FooterComponent';
-import styles from '../scss/css-modules/assortmentPage.module.css';
+import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import AssortmentCardsComponent from '../components/AssortmentCardsComponent';
+import FooterComponent from '../components/FooterComponent';
+import HeaderComponent from '../components/HeaderComponent';
 import LeftPanelComponent from '../components/LeftPanelComponent';
-import ThematicBreakComponent from '../components/ThematicBreakComponent';
 import RightPanelComponent from '../components/RightPanelComponent';
+import ThematicBreakComponent from '../components/ThematicBreakComponent';
+import styles from '../scss/css-modules/assortmentPage.module.css';
 
 const Assortment = () => {
   const { pathname } = useLocation();
@@ -26,7 +27,8 @@ const Assortment = () => {
           <LeftPanelComponent />
           <div className={styles.content}>
             <ThematicBreakComponent />
-            Ассортимент колонн и цены.
+            <div className={styles.header}>Ассортимент колонн и цены.</div>
+            <AssortmentCardsComponent />
             <ThematicBreakComponent />
           </div>
           <RightPanelComponent />
