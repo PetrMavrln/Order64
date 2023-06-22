@@ -6,6 +6,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end; }
+  @media (max-width: 565px) {
+    .cardItem {
+      max-width: 450px; } }
   .cardItem:hover {
     cursor: pointer; }
     .cardItem:hover .img {

@@ -7,6 +7,10 @@
   flex-direction: column;
   justify-content: flex-end;
 
+  @media (max-width: 565px) {
+    max-width: 450px;
+  }
+
   &:hover {
     cursor: pointer;
     .img {

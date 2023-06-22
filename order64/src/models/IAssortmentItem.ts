@@ -1,6 +1,6 @@
 export interface IAssortmentItem {
   id: number;
   title: string;
-  price: string;
+  price: number;
   img: string;
 }
