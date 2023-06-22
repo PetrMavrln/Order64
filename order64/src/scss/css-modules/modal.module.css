@@ -72,6 +72,11 @@
       .modalContent .img {
         width: 90vw;
         height: auto; } }
+  .modalContent .cardNumber {
+    font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
+    position: absolute;
+    bottom: 15px;
+    left: 15px; }
   .modalContent .cardPrice {
     font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
     text-align: center;

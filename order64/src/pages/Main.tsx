@@ -3,6 +3,7 @@ import HeaderComponent from '../components/HeaderComponent';
 import MainContentComponent from '../components/MainContentComponent';
 import FooterComponent from '../components/FooterComponent';
 import { useLocation } from 'react-router-dom';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const Main = () => {
   const { pathname } = useLocation();
@@ -17,9 +18,15 @@ const Main = () => {
 
   return (
     <>
-      <HeaderComponent />
-      <MainContentComponent />
-      <FooterComponent />
+      <HelmetProvider>
+        <Helmet>
+          <title>Order - художественная мастерская</title>
+          <meta name="description" content="Order - художественная мастерская" />
+        </Helmet>
+        <HeaderComponent />
+        <MainContentComponent />
+        <FooterComponent />
+      </HelmetProvider>
     </>
   );
 };

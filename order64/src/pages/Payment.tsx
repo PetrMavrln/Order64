@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom';
 import LeftPanelComponent from '../components/LeftPanelComponent';
 import ThematicBreakComponent from '../components/ThematicBreakComponent';
 import RightPanelComponent from '../components/RightPanelComponent';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const Payment = () => {
   const { pathname } = useLocation();
@@ -20,19 +21,25 @@ const Payment = () => {
 
   return (
     <>
-      <HeaderComponent />
-      <div className={styles.wrapper}>
-        <div className={styles.container}>
-          <LeftPanelComponent />
-          <div className={styles.content}>
-            <ThematicBreakComponent />
-            Доставка, оплата
-            <ThematicBreakComponent />
+      <HelmetProvider>
+        <Helmet>
+          <title>Доставка, оплата</title>
+          <meta name="description" content="Доставка, оплата" />
+        </Helmet>
+        <HeaderComponent />
+        <div className={styles.wrapper}>
+          <div className={styles.container}>
+            <LeftPanelComponent />
+            <div className={styles.content}>
+              <ThematicBreakComponent />
+              Доставка, оплата
+              <ThematicBreakComponent />
+            </div>
+            <RightPanelComponent />
           </div>
-          <RightPanelComponent />
         </div>
-      </div>
-      <FooterComponent />
+        <FooterComponent />
+      </HelmetProvider>
     </>
   );
 };

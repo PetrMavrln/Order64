@@ -46,9 +46,12 @@
     height: 60px;
     background-color: transparent;
     font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
+    display: flex;
+    flex-direction: column;
     text-align: end; }
     @media (max-width: 950px) {
       .container .contacts {
+        display: block;
         margin-top: 80px;
         margin-bottom: -22px;
         text-align: center; } }

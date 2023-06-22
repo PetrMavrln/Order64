@@ -20,7 +20,7 @@ const HeaderComponent = () => {
         />
         <h1>Архитектурные ордера</h1>
         <div className={styles.contacts}>
-          Саратов, 1-ый Проезд строителей 12.
+          Саратов, 1-ый Проезд строителей 12
           <a href="tel:89085520984" className={styles.phone}>
             Тел: 89085520984
           </a>

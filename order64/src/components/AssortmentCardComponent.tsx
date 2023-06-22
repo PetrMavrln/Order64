@@ -11,13 +11,14 @@ const AssortmentCardComponent = ({ card, index }: { card: IAssortmentItem; index
   return (
     <>
       <div className={styles.cardItem} onClick={() => setIsOpen(true)}>
-        <div className={styles.cardHeader}>
-          {card.title} ({index + 1})
-        </div>
+        <div className={styles.cardHeader}>{card.title}</div>
         <div className={styles.imgContainer}>
           <img src={image} className={styles.img} alt="Рисунок изделия" />
         </div>
-        <div className={styles.cardPrice}>цена {card.price} р.</div>
+        <div className={styles.cardBottomContainer}>
+          <div className={styles.cardNumber}>{index + 1}</div>
+          <div className={styles.cardPrice}>цена {card.price} р.</div>
+        </div>
       </div>
       {isOpen && <ModalComponent setIsOpen={setIsOpen} card={card} index={index} />}
     </>

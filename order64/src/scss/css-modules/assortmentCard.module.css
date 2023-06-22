@@ -24,7 +24,13 @@
     width: 100%;
     height: 100%;
     transition: transform 0.5s ease-in-out; }
+  .cardItem .cardBottomContainer {
+    display: flex;
+    justify-content: flex-start; }
+  .cardItem .cardNumber {
+    font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
+    margin: auto 0 auto 5px; }
   .cardItem .cardPrice {
     font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
-    text-align: center;
-    padding: 5px 0; }
+    padding: 5px 0;
+    margin: 0 auto; }

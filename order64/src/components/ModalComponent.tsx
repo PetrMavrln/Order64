@@ -22,9 +22,8 @@ const ModalComponent = ({
             <div className={styles.imgContainer}>
               <img src={image} className={styles.img} alt="Рисунок изделия" />
             </div>
-            <div className={styles.cardHeader}>
-              {card.title} ({index + 1})
-            </div>
+            <div className={styles.cardHeader}>{card.title}</div>
+            <div className={styles.cardNumber}>{index + 1}</div>
             <div className={styles.cardPrice}>цена {card.price} р.</div>
           </div>
         </div>

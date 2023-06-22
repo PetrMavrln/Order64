@@ -12,12 +12,9 @@
   margin: 0 $contMargin;
   background: url(../../assets/headerImg.jpg) no-repeat center;
   display: flex;
-  // flex-direction: column;
-  // align-items: center;
   justify-content: space-around;
 
   @media (max-width: 950px) {
-    // display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
@@ -28,7 +25,6 @@
     margin-top: 36px;
     margin-right: 89px;
     height: 49px;
-    // margin: 36px 0 0 110px;
     background-color: transparent;
 
     &:hover {
@@ -40,32 +36,20 @@
       margin-right: 0;
       transform: scale(1.35);
       filter: brightness(100) saturate(100%);
-      // invert(99%) sepia(2%) saturate(702%) hue-rotate(239deg)
-      //   brightness(114%) contrast(77%);
-      // background-color: rgba(255, 255, 255, 0.5);
-      // box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.5);
     }
   }
 
   h1 {
     align-self: flex-end;
     margin-bottom: 10px;
-    // text-align: center;
-    // font-size: 24px;
     font-size: clamp(1rem, calc(0.5rem + 1.25vw), 1.5rem);
-    // line-height: 29px;
-    // margin: 239px 0 0 165px;
-    // margin-bottom: 8px;
     background-color: transparent;
-    // @media (min-width: 2000px) {
-    //   font-size: 1.5rem;
-    // }
+
     @media (max-width: 950px) {
       margin-top: 0;
       margin-bottom: 0;
       align-self: center;
       display: none;
-      // text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
     }
   }
 
@@ -74,18 +58,17 @@
     margin-top: 20px;
     width: 302px;
     height: 60px;
-    // margin: 20px 0 0 105px;
     background-color: transparent;
     font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
+    display: flex;
+    flex-direction: column;
     text-align: end;
-    // @media (min-width: 2000px) {
-    //   font-size: 1rem;
-    // }
+
     @media (max-width: 950px) {
+      display: block;
       margin-top: 80px;
       margin-bottom: -22px;
       text-align: center;
-      // text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
     }
 
     .phone,

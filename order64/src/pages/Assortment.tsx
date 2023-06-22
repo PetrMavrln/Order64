@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 import AssortmentCardsComponent from '../components/AssortmentCardsComponent';
 import FooterComponent from '../components/FooterComponent';
@@ -21,20 +22,26 @@ const Assortment = () => {
 
   return (
     <>
-      <HeaderComponent />
-      <div className={styles.wrapper}>
-        <div className={styles.container}>
-          <LeftPanelComponent />
-          <div className={styles.content}>
-            <ThematicBreakComponent />
-            <div className={styles.header}>Ассортимент колонн и цены.</div>
-            <AssortmentCardsComponent />
-            <ThematicBreakComponent />
+      <HelmetProvider>
+        <Helmet>
+          <title>Ассортимент колонн и цены</title>
+          <meta name="description" content="Ассортимент колонн и цены" />
+        </Helmet>
+        <HeaderComponent />
+        <div className={styles.wrapper}>
+          <div className={styles.container}>
+            <LeftPanelComponent />
+            <div className={styles.content}>
+              <ThematicBreakComponent />
+              <div className={styles.header}>Ассортимент колонн и цены.</div>
+              <AssortmentCardsComponent />
+              <ThematicBreakComponent />
+            </div>
+            <RightPanelComponent />
           </div>
-          <RightPanelComponent />
         </div>
-      </div>
-      <FooterComponent />
+        <FooterComponent />
+      </HelmetProvider>
     </>
   );
 };
