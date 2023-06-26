@@ -22,7 +22,7 @@ const HeaderComponent = () => {
         <div className={styles.contacts}>
           Саратов, 1-ый Проезд строителей 12
           <a href="tel:89085520984" className={styles.phone}>
-            Тел: 89085520984
+            Тел: 89085520985
           </a>
           <a href="mailto:order64@mail.ru" className={styles.mail}>
             Почта: order64@mail.ru

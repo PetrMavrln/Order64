@@ -32,7 +32,16 @@ const Payment = () => {
             <LeftPanelComponent />
             <div className={styles.content}>
               <ThematicBreakComponent />
-              Доставка, оплата
+              <div className={styles.main}>
+                <div className={styles.header}>Доставка, оплата</div>
+                <ol>
+                  <li>Доставка нашим транспортом и транспортными компаниями.</li>
+                  <li>Оплата наличным и безналичным расчётом.</li>
+                </ol>
+                <a href="tel:89085520985" className={styles.phone}>
+                  Сергей: 89085520985
+                </a>
+              </div>
               <ThematicBreakComponent />
             </div>
             <RightPanelComponent />

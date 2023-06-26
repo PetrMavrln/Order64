@@ -16,11 +16,24 @@
     align-items: center;
     background-color: #e2e2e2;
     z-index: 99; }
-    .container .content .header {
-      font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
-      padding: 5px 0; }
-    .container .content .link {
-      padding: 0 5px; }
-    .container .content .linkDiv {
+    .container .content .main {
       font-family: 'Roboto Slab', Tahoma, serif;
-      font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem); }
+      font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
+      width: 100%;
+      padding: 0 30px; }
+      @media (max-width: 620px) {
+        .container .content .main {
+          padding: 0 5px; } }
+      .container .content .main .header {
+        font-family: Montserrat, Roboto, system-ui, Tahoma, sans-serif;
+        font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
+        padding: 5px 0;
+        text-align: center; }
+      .container .content .main ol {
+        padding: 10px 0;
+        padding-left: 20px;
+        list-style-type: circle; }
+      .container .content .main .link {
+        padding: 0 5px; }
+      .container .content .main .linkDiv {
+        text-align: center; }

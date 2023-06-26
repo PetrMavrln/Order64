@@ -26,8 +26,10 @@
           padding: 0 5px; } }
       .container .content .main .header,
       .container .content .main .header2 {
+        font-family: Montserrat, Roboto, system-ui, Tahoma, sans-serif;
         font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem); }
       .container .content .main .header2 {
+        text-align: center;
         margin-bottom: 10px; }
       .container .content .main h2 {
         margin-top: 10px;

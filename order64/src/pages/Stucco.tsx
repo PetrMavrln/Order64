@@ -32,16 +32,29 @@ const Stucco = () => {
             <LeftPanelComponent />
             <div className={styles.content}>
               <ThematicBreakComponent />
-              <div className={styles.header}>Лепнина интерьерная</div>
-              <div className={styles.linkDiv}>
-                Подробнее по
-                <a
-                  className={styles.link}
-                  href="https://order64.ru/"
-                  target="_blank"
-                  rel="noreferrer">
-                  ссылке
-                </a>
+              <div className={styles.main}>
+                <div className={styles.header}>Лепнина интерьерная</div>
+                <ol>
+                  <li>
+                    Пройдя по ссылке ниже Вы можете ознакомиться с подборкой лепнины уже в
+                    завершенных интерьерах (портфолио). Мы создали комплекты для оформления
+                    помещений во всех основных стилях.
+                  </li>
+                  <li>
+                    Так же увидите разнообразие потолочных розеток, карнизов и молдингов. По запросу
+                    предоставим множество зеркал, авторских светильников и стеновых панно.
+                  </li>
+                </ol>
+                <div className={styles.linkDiv}>
+                  Подробнее по
+                  <a
+                    className={styles.link}
+                    href="https://order64.ru/"
+                    target="_blank"
+                    rel="noreferrer">
+                    ссылке
+                  </a>
+                </div>
               </div>
               <ThematicBreakComponent />
             </div>

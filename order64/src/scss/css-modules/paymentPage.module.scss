@@ -9,21 +9,48 @@
   position: relative;
   margin: 0 $contMargin;
   display: flex;
-  // flex-direction: column;
-  // align-items: center;
   justify-content: space-between;
   overflow: hidden;
 
   .content {
     margin: 0 auto;
     width: 635px;
-    // height: 1315px;
-    // min-width: 308px;
-    // max-width: 635px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #e2e2e2;
     z-index: 99;
+
+    .main {
+      font-family: 'Roboto Slab', Tahoma, serif;
+      font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
+      width: 100%;
+      padding: 0 30px;
+
+      @media (max-width: 620px) {
+        padding: 0 5px;
+      }
+
+      .header {
+        font-family: Montserrat, Roboto, system-ui, Tahoma, sans-serif;
+        font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
+        padding: 5px 0;
+        text-align: center;
+      }
+
+      ol {
+        padding: 10px 0;
+        padding-left: 20px;
+        list-style-type: circle;
+      }
+
+      .phone {
+        display: inline-block;
+        background-color: inherit;
+        color: inherit;
+        text-decoration: none;
+        margin-top: 5px;
+      }
+    }
   }
 }

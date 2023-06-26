@@ -33,10 +33,12 @@
 
       .header,
       .header2 {
+        font-family: Montserrat, Roboto, system-ui, Tahoma, sans-serif;
         font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
       }
 
       .header2 {
+        text-align: center;
         margin-bottom: 10px;
       }
 

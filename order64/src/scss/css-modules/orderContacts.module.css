@@ -1,3 +1,7 @@
+.orderContainer {
+  display: flex;
+  flex-direction: column; }
+
 .orderContactsHeader {
   font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
   text-align: center;
@@ -7,5 +11,9 @@
       margin-bottom: 15px; } }
 
 .contactNumber {
-  font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
-  margin-bottom: 5px; }
+  display: inline-block;
+  background-color: inherit;
+  color: inherit;
+  text-decoration: none;
+  margin-top: 5px;
+  font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem); }
