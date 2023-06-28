@@ -58,7 +58,10 @@
       .container .content .main .imageCont {
         display: flex;
         max-width: 500px;
-        margin: 0 auto 0 auto; }
+        margin: 20px auto 0 auto; }
+        @media (max-width: 620px) {
+          .container .content .main .imageCont {
+            margin-top: 5px; } }
         .container .content .main .imageCont .image {
           max-width: 33%;
           margin-right: 5px; }

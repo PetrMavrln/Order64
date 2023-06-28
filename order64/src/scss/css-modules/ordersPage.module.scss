@@ -84,11 +84,11 @@
       .imageCont {
         display: flex;
         max-width: 500px;
-        margin: 0 auto 0 auto;
+        margin: 20px auto 0 auto;
 
-        // @media (max-width: 620px) {
-        //   margin-top: 15px;
-        // }
+        @media (max-width: 620px) {
+          margin-top: 5px;
+        }
 
         .image {
           max-width: 33%;

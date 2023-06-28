@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../scss/css-modules/assortmentCard.module.css';
 import { IAssortmentItem } from '../models/IAssortmentItem';
 import ModalComponent from './ModalComponent';
@@ -7,6 +7,11 @@ const AssortmentCardComponent = ({ card, index }: { card: IAssortmentItem; index
   const image = require(`../assets/assortment/${card.img}`);
 
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    isOpen && (document.body.style.overflow = 'hidden');
+    !isOpen && (document.body.style.overflow = 'unset');
+  }, [isOpen]);
 
   return (
     <>
