@@ -19,3 +19,27 @@
     .container .content .header {
       font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
       margin-bottom: 15px; }
+    .container .content .description {
+      width: 100%;
+      padding: 0 30px;
+      font-family: 'Roboto Slab', Tahoma, serif;
+      font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem); }
+      @media (max-width: 620px) {
+        .container .content .description {
+          padding: 0 5px; } }
+      .container .content .description .underline {
+        text-decoration: underline;
+        padding-top: 5px; }
+      .container .content .description ol {
+        padding: 5px 0;
+        padding-left: 20px;
+        list-style-type: circle; }
+        .container .content .description ol b {
+          font-weight: bold; }
+      .container .content .description .par {
+        margin-bottom: 5px; }
+        .container .content .description .par:last-of-type {
+          margin-bottom: 30px; }
+          @media (max-width: 620px) {
+            .container .content .description .par:last-of-type {
+              margin-bottom: 15px; } }

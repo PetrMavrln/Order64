@@ -1,0 +1,12 @@
+.imageCont {
+  max-width: 500px;
+  margin: 30px auto 0 auto;
+
+  @media (max-width: 620px) {
+    margin-top: 15px;
+  }
+
+  .image {
+    width: 100%;
+  }
+}

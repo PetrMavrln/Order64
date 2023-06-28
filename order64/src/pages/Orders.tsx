@@ -7,6 +7,7 @@ import RightPanelComponent from '../components/RightPanelComponent';
 import { useLocation } from 'react-router-dom';
 import ThematicBreakComponent from '../components/ThematicBreakComponent';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import OrdersImageComponent from '../components/OrdersImageComponent';
 
 const Orders = () => {
   const { pathname } = useLocation();
@@ -18,6 +19,38 @@ const Orders = () => {
       behavior: 'smooth',
     });
   }, [pathname]);
+
+  const imgArr = [
+    {
+      id: 0,
+      alt: 'Триадная структура ордера',
+      img: '1_.jpg',
+    },
+    {
+      id: 1,
+      alt: 'Римские ордеры',
+      img: '2.1.png',
+    },
+    {
+      id: 2,
+      alt: 'Римские ордеры',
+      img: '2.2.jpg',
+    },
+    {
+      id: 3,
+      alt: 'Римские ордеры',
+      img: '2.3.png',
+    },
+    {
+      id: 4,
+      alt: 'Разница между колоннами',
+      img: '3.png',
+    },
+  ];
+
+  const image1 = require(`../assets/orders/${imgArr[1].img}`);
+  const image2 = require(`../assets/orders/${imgArr[2].img}`);
+  const image3 = require(`../assets/orders/${imgArr[3].img}`);
 
   return (
     <>
@@ -31,6 +64,12 @@ const Orders = () => {
           <div className={styles.container}>
             <LeftPanelComponent />
             <div className={styles.content}>
+              <ThematicBreakComponent />
+              <div className={styles.firstOlDiv}>
+                <ol>
+                  <li>Антаблемент моделируется индивидуально.</li>
+                </ol>
+              </div>
               <ThematicBreakComponent />
               <div className={styles.main}>
                 <div className={styles.header2}>
@@ -58,6 +97,7 @@ const Orders = () => {
                   <li>карниз</li>
                 </ol>
                 <div>База имеет плинт, торус (вал), трохилус (выкружка).</div>
+                <OrdersImageComponent img={imgArr[0]} />
               </div>
               <ThematicBreakComponent />
               <div className={styles.main}>
@@ -102,6 +142,11 @@ const Orders = () => {
                   </li>
                   <li>Композитный ордер (Модульонный)</li>
                 </ol>
+                <div className={styles.imageCont}>
+                  <img src={image1} className={styles.image} alt={imgArr[1].alt} />
+                  <img src={image2} className={styles.image} alt={imgArr[2].alt} />
+                  <img src={image3} className={styles.image} alt={imgArr[3].alt} />
+                </div>
               </div>
               <ThematicBreakComponent />
               <div className={styles.main}>
@@ -158,9 +203,10 @@ const Orders = () => {
                 <div>
                   Взгляните на следующее сравнение. Как только вы поймете разницу, вы никогда больше
                   не будете смотреть на круглые колонны одинаково! Прямая конусность всегда будет
-                  выглядеть “дешево”, в то время как архитектурный энтасис будет выглядеть
+                  выглядеть “дешево”, в то время как архитектурный энтазис будет выглядеть
                   аутентично и красиво.
                 </div>
+                <OrdersImageComponent img={imgArr[4]} />
                 <br />
               </div>
             </div>

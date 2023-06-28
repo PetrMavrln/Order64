@@ -2,6 +2,7 @@ import React, { Suspense } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { publicRoutes } from '../routes';
 import { MAIN_ROUTE } from '../utils/consts';
+import LoadingComponent from './LoadingComponent';
 
 const AppRouter = () => {
   return (
@@ -11,7 +12,7 @@ const AppRouter = () => {
           key={path}
           path={path}
           element={
-            <Suspense fallback={<>Идет загрузка</>}>
+            <Suspense fallback={<LoadingComponent />}>
               <Component />
             </Suspense>
           }

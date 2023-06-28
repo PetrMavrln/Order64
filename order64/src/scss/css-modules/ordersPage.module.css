@@ -16,6 +16,18 @@
     align-items: center;
     background-color: #e2e2e2;
     z-index: 99; }
+    .container .content .firstOlDiv {
+      margin-right: auto;
+      width: 100%;
+      padding: 0 30px;
+      font-family: 'Roboto Slab', Tahoma, serif;
+      font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem); }
+      @media (max-width: 620px) {
+        .container .content .firstOlDiv {
+          padding: 0 5px; } }
+      .container .content .firstOlDiv > ol {
+        padding-left: 20px;
+        list-style-type: circle; }
     .container .content .main {
       font-family: 'Roboto Slab', Tahoma, serif;
       font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
@@ -41,3 +53,14 @@
       .container .content .main .subOl {
         padding-top: 0;
         padding-bottom: 0; }
+      .container .content .main:nth-of-type(3) ol:last-child {
+        padding-bottom: 0; }
+      .container .content .main .imageCont {
+        display: flex;
+        max-width: 500px;
+        margin: 0 auto 0 auto; }
+        .container .content .main .imageCont .image {
+          max-width: 33%;
+          margin-right: 5px; }
+          .container .content .main .imageCont .image:last-of-type {
+            margin-right: 0; }

@@ -1,11 +1,12 @@
 import React from 'react';
 import logo from '../assets/logo.svg';
 import styles from '../scss/css-modules/header.module.css';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { MAIN_ROUTE } from '../utils/consts';
 
 const HeaderComponent = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <div className={styles.wrapper}>
@@ -18,7 +19,8 @@ const HeaderComponent = () => {
             navigate(MAIN_ROUTE);
           }}
         />
-        <h1>Архитектурные ордера</h1>
+        {location.pathname === MAIN_ROUTE ? <h1>Архитектурные ордера</h1> : <h2> </h2>}
+
         <div className={styles.contacts}>
           Саратов, 1-ый Проезд строителей 12
           <a href="tel:89085520984" className={styles.phone}>

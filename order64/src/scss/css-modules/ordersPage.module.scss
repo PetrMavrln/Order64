@@ -21,6 +21,22 @@
     background-color: #e2e2e2;
     z-index: 99;
 
+    .firstOlDiv {
+      margin-right: auto;
+      width: 100%;
+      padding: 0 30px;
+      font-family: 'Roboto Slab', Tahoma, serif;
+      font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
+
+      @media (max-width: 620px) {
+        padding: 0 5px;
+      }
+
+      & > ol {
+        padding-left: 20px;
+        list-style-type: circle;
+      }
+    }
     .main {
       font-family: 'Roboto Slab', Tahoma, serif;
       font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
@@ -55,6 +71,33 @@
       .subOl {
         padding-top: 0;
         padding-bottom: 0;
+      }
+
+      &:nth-of-type(3) {
+        ol {
+          &:last-child {
+            padding-bottom: 0;
+          }
+        }
+      }
+
+      .imageCont {
+        display: flex;
+        max-width: 500px;
+        margin: 0 auto 0 auto;
+
+        // @media (max-width: 620px) {
+        //   margin-top: 15px;
+        // }
+
+        .image {
+          max-width: 33%;
+          margin-right: 5px;
+
+          &:last-of-type {
+            margin-right: 0;
+          }
+        }
       }
     }
   }
