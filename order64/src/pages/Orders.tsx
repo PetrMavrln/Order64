@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react';
-import HeaderComponent from '../components/HeaderComponent';
-import styles from '../scss/css-modules/ordersPage.module.css';
-import FooterComponent from '../components/FooterComponent';
-import LeftPanelComponent from '../components/LeftPanelComponent';
-import RightPanelComponent from '../components/RightPanelComponent';
-import { useLocation } from 'react-router-dom';
-import ThematicBreakComponent from '../components/ThematicBreakComponent';
+import { useEffect } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
+import FooterComponent from '../components/FooterComponent';
+import HeaderComponent from '../components/HeaderComponent';
+import LeftPanelComponent from '../components/LeftPanelComponent';
 import OrdersImageComponent from '../components/OrdersImageComponent';
+import RightPanelComponent from '../components/RightPanelComponent';
+import ThematicBreakComponent from '../components/ThematicBreakComponent';
+import styles from '../scss/css-modules/ordersPage.module.css';
 
 const Orders = () => {
   const { pathname } = useLocation();
@@ -46,11 +46,14 @@ const Orders = () => {
       alt: 'Разница между колоннами',
       img: '3.png',
     },
+    {
+      id: 5,
+      alt: 'Римские ордеры',
+      img: '2.jpg',
+    },
   ];
 
-  const image1 = require(`../assets/orders/${imgArr[1].img}`);
-  const image2 = require(`../assets/orders/${imgArr[2].img}`);
-  const image3 = require(`../assets/orders/${imgArr[3].img}`);
+  const image4 = require(`../assets/orders/${imgArr[4].img}`);
 
   return (
     <>
@@ -140,12 +143,19 @@ const Orders = () => {
                       <li>Римско-коринфский ордер</li>
                     </ol>
                   </li>
-                  <li>Композитный ордер (Модульонный)</li>
+                  <li>Композитный ордер (Модульный)</li>
                 </ol>
+                <OrdersImageComponent img={imgArr[5]} />
                 <div className={styles.imageCont}>
-                  <img src={image1} className={styles.image} alt={imgArr[1].alt} />
-                  <img src={image2} className={styles.image} alt={imgArr[2].alt} />
-                  <img src={image3} className={styles.image} alt={imgArr[3].alt} />
+                  <div className={styles.imgWrapper}>
+                    <OrdersImageComponent img={imgArr[1]} />
+                  </div>
+                  <div className={styles.imgWrapper}>
+                    <OrdersImageComponent img={imgArr[2]} />
+                  </div>
+                  <div className={styles.imgWrapper}>
+                    <OrdersImageComponent img={imgArr[3]} />
+                  </div>
                 </div>
               </div>
               <ThematicBreakComponent />
@@ -206,7 +216,9 @@ const Orders = () => {
                   выглядеть “дешево”, в то время как архитектурный энтазис будет выглядеть
                   аутентично и красиво.
                 </div>
-                <OrdersImageComponent img={imgArr[4]} />
+                <div className={styles.imageContNoInt}>
+                  <img src={image4} className={styles.imageNoInt} alt={imgArr[4].alt} />
+                </div>
                 <br />
               </div>
             </div>

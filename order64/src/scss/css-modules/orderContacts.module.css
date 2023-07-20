@@ -1,6 +1,10 @@
 .orderContainer {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-bottom: 30px; }
+  @media (max-width: 620px) {
+    .orderContainer {
+      margin-bottom: 15px; } }
 
 .orderContactsHeader {
   font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);

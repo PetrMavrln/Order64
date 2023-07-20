@@ -2,7 +2,7 @@
   background-color: rgba(0, 0, 0, 0.3);
   width: 100vw;
   height: 101vh;
-  z-index: 0;
+  z-index: 2;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -12,6 +12,7 @@
 
 .centered {
   position: fixed;
+  z-index: 9999;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -19,9 +20,14 @@
 
 .modal {
   color: white;
-  z-index: 10;
+  max-height: 90vh;
+  z-index: 9999;
   border-radius: 16px;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+  @media (max-width: 1150px) {
+    max-width: 90vw;
+    height: auto;
+  }
 }
 
 .closeBtn {
@@ -30,7 +36,7 @@
   border: none;
   width: 30px;
   height: 30px;
-  background: url('../../assets/UI/closeButton.svg') no-repeat center;
+  background: url('../../../assets/UI/closeButton.svg') no-repeat center;
   transition: all 0.25s ease;
   position: absolute;
   right: 0;
@@ -51,55 +57,58 @@
 }
 
 .modalContent {
-  height: 90vh;
+  .modalBgFix {
+    // max-height: 90vh;
+    width: 90vw;
+    height: 90vh;
+    // @media (max-width: 1150px) {
+    //   max-width: 90vw;
+    //   height: auto;
+    // }
+  }
+}
+
+.modalWrap {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   position: relative;
+}
+
+.modalImg {
+  margin: 0;
+  border-radius: 16px;
+  max-height: 90vh;
 
   @media (max-width: 1150px) {
-    width: 90vw;
+    max-width: 90vw;
     height: auto;
   }
+}
 
-  .cardHeader {
-    position: absolute;
-    top: 0;
-    // left: 0;
-    font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
-    text-align: center;
-    padding: 15px 0;
-    margin: auto 0;
-  }
-  .imgContainer {
-    overflow: hidden;
-  }
-  .img {
-    margin: 0;
-    border-radius: 16px;
-    height: 90vh;
-    transition: transform 0.5s ease-in-out;
+.modalHeader {
+  position: absolute;
+  top: 0;
+  // left: 0;
+  font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
+  text-align: center;
+  padding: 15px 0;
+  margin: auto 0;
+}
 
-    @media (max-width: 1150px) {
-      width: 90vw;
-      height: auto;
-    }
-  }
+.modalNumber {
+  font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
 
-  .cardNumber {
-    font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-  }
-
-  .cardPrice {
-    font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
-    text-align: center;
-    padding: 5px 0;
-    position: absolute;
-    bottom: 15px;
-    // left: 0;
-  }
+.modalPrice {
+  font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
+  text-align: center;
+  padding: 5px 0;
+  position: absolute;
+  bottom: 15px;
+  // left: 0;
 }

@@ -18,7 +18,6 @@ const MainContent = () => {
           <OrderLinksComponent />
           <ThematicBreakComponent />
           <OrderContactsComponent />
-          <br />
         </div>
         <RightPanelComponent />
       </div>

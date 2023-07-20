@@ -1,5 +1,5 @@
 .imageCont {
-  max-width: 500px;
+  max-width: 635px;
   margin: 30px auto 0 auto;
 
   @media (max-width: 620px) {
@@ -8,5 +8,12 @@
 
   .image {
     width: 100%;
+
+    transition: transform 0.5s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.025);
+    }
   }
 }

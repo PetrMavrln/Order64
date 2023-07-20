@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
+import FooterComponent from '../components/FooterComponent';
 import HeaderComponent from '../components/HeaderComponent';
 import MainContentComponent from '../components/MainContentComponent';
-import FooterComponent from '../components/FooterComponent';
-import { useLocation } from 'react-router-dom';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const Main = () => {
   const { pathname } = useLocation();

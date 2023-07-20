@@ -9,6 +9,28 @@
   background: url(../../assets/headerImg.jpg) no-repeat center;
   display: flex;
   justify-content: space-around; }
+  .container .lion1 {
+    position: absolute;
+    bottom: 0;
+    left: 3vw;
+    width: 323px;
+    height: 171px; }
+    .container .lion1:hover {
+      cursor: pointer; }
+    @media (max-width: 1100px) {
+      .container .lion1 {
+        display: none; } }
+  .container .lion2 {
+    position: absolute;
+    bottom: 1px;
+    right: 3vw;
+    width: 323px;
+    height: 171px; }
+    .container .lion2:hover {
+      cursor: pointer; }
+    @media (max-width: 1100px) {
+      .container .lion2 {
+        display: none; } }
   @media (max-width: 950px) {
     .container {
       flex-direction: column;

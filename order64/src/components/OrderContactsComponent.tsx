@@ -1,4 +1,3 @@
-import React from 'react';
 import { IOrderContacts } from '../models/IOrderContacts';
 import styles from '../scss/css-modules/orderContacts.module.css';
 
