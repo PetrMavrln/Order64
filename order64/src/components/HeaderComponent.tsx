@@ -3,14 +3,17 @@ import styles from '../scss/css-modules/header.module.css';
 import modalStyles from '../scss/css-modules/modal/modal.module.css';
 import { MAIN_ROUTE } from '../utils/consts';
 
-import { useEffect, useState } from 'react';
+import { Suspense, lazy, useEffect, useState } from 'react';
 import lion1 from '../assets/Lion1.png';
 import lion2 from '../assets/Lion2.png';
 import logo from '../assets/logo.svg';
-import CanvasComponent from './3d_model/CanvasComponent';
+// import CanvasComponent from './3d_model/CanvasComponent';
 import ModalComponent from './modal/ModalComponent';
+import LoadingComponent from './LoadingComponent';
 
 const HeaderComponent = () => {
+  const CanvasComponent = lazy(() => import('./3d_model/CanvasComponent'));
+
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -32,13 +35,13 @@ const HeaderComponent = () => {
       position: [0.013, 0.062, -0.002],
       rotation: [Math.PI / 2, 0, -2.2],
       scale: 0.045,
-      name: 'lion1Big-transformed',
+      name: 'lion1-sandstone-transformed',
     },
     {
       position: [-0.009, 0.068, 0.009],
       rotation: [Math.PI / 2, 0, -4.422],
       scale: 0.045,
-      name: 'lion2Big-transformed',
+      name: 'lion2-sandstone-transformed',
     },
   ];
 
@@ -56,7 +59,7 @@ const HeaderComponent = () => {
         <img src={lion1} className={styles.lion1} alt="Lion" onClick={() => setShowModal1(true)} />
         <img src={lion2} className={styles.lion2} alt="Lion" onClick={() => setShowModal2(true)} />
         {location.pathname === MAIN_ROUTE ? <h1>Архитектурные ордера</h1> : <h2> </h2>}
-        <div className={styles.contacts}>
+        <address className={styles.contacts}>
           Саратов, 1-ый Проезд строителей 12
           <a href="tel:89085520984" className={styles.phone}>
             Тел: 89085520985
@@ -64,7 +67,7 @@ const HeaderComponent = () => {
           <a href="mailto:order64@mail.ru" className={styles.mail}>
             Почта: order64@mail.ru
           </a>
-        </div>
+        </address>
       </div>
       {showModal2 && (
         <ModalComponent
@@ -72,14 +75,16 @@ const HeaderComponent = () => {
           onRequestClose={() => {
             setShowModal2((prev) => !prev);
           }}>
-          <div className={modalStyles.modalBgFix}>
-            <CanvasComponent
-              position={lions[1].position}
-              rotation={lions[1].rotation}
-              scale={lions[1].scale}
-              name={lions[1].name}
-            />
-          </div>
+          <Suspense fallback={<LoadingComponent />}>
+            <div className={modalStyles.modalBgFix}>
+              <CanvasComponent
+                position={lions[1].position}
+                rotation={lions[1].rotation}
+                scale={lions[1].scale}
+                name={lions[1].name}
+              />
+            </div>
+          </Suspense>
         </ModalComponent>
       )}
       {showModal1 && (
@@ -88,14 +93,16 @@ const HeaderComponent = () => {
           onRequestClose={() => {
             setShowModal1((prev) => !prev);
           }}>
-          <div className={modalStyles.modalBgFix}>
-            <CanvasComponent
-              position={lions[0].position}
-              rotation={lions[0].rotation}
-              scale={lions[0].scale}
-              name={lions[0].name}
-            />
-          </div>
+          <Suspense fallback={<LoadingComponent />}>
+            <div className={modalStyles.modalBgFix}>
+              <CanvasComponent
+                position={lions[0].position}
+                rotation={lions[0].rotation}
+                scale={lions[0].scale}
+                name={lions[0].name}
+              />
+            </div>
+          </Suspense>
         </ModalComponent>
       )}
     </div>

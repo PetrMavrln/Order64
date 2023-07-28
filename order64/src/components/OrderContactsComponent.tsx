@@ -12,13 +12,15 @@ const OrderContactsComponent = () => {
   return (
     <div className={styles.orderContainer}>
       <div className={styles.orderContactsHeader}>Проф. контакты</div>
-      {orderContacts.map((contact: IOrderContacts) => (
-        <a href={`tel: ${contact.number}`} className={styles.contactNumber} key={contact.id}>
-          {contact.title}
-          {contact.number}
-          {contact.name}
-        </a>
-      ))}
+      <address className={styles.address}>
+        {orderContacts.map((contact: IOrderContacts) => (
+          <a href={`tel: ${contact.number}`} className={styles.contactNumber} key={contact.id}>
+            {contact.title}
+            {contact.number}
+            {contact.name}
+          </a>
+        ))}
+      </address>
     </div>
   );
 };

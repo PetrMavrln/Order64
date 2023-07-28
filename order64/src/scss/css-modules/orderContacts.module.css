@@ -1,10 +1,24 @@
 .orderContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   margin-bottom: 30px; }
   @media (max-width: 620px) {
     .orderContainer {
       margin-bottom: 15px; } }
+
+.address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
 
 .orderContactsHeader {
   font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);

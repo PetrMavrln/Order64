@@ -1,17 +1,12 @@
-.copyright,
-.author {
+.copyright {
   font-family: 'Roboto Slab', Tahoma, serif;
   font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
   text-align: center; }
 
 .copyright {
-  margin-top: 30px; }
-  @media (max-width: 620px) {
-    .copyright {
-      margin-top: 15px; } }
-
-.author {
+  margin-top: 30px;
   margin-bottom: 30px; }
   @media (max-width: 620px) {
-    .author {
+    .copyright {
+      margin-top: 15px;
       margin-bottom: 15px; } }

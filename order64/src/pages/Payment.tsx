@@ -38,9 +38,11 @@ const Payment = () => {
                   <li>Доставка нашим транспортом и транспортными компаниями.</li>
                   <li>Оплата наличным и безналичным расчётом.</li>
                 </ol>
-                <a href="tel:89085520985" className={styles.phone}>
-                  Сергей: 89085520985
-                </a>
+                <address className={styles.address}>
+                  <a href="tel:89085520985" className={styles.phone}>
+                    Сергей: 89085520985
+                  </a>
+                </address>
               </div>
               <ThematicBreakComponent />
             </div>

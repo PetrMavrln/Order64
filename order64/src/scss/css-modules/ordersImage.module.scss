@@ -9,10 +9,20 @@
   .image {
     width: 100%;
 
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+
+    transition: -webkit-transform 0.5s ease-in-out;
+
+    -o-transition: transform 0.5s ease-in-out;
+
     transition: transform 0.5s ease-in-out;
+
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 
     &:hover {
       cursor: pointer;
+      -webkit-transform: scale(1.025);
+      -ms-transform: scale(1.025);
       transform: scale(1.025);
     }
   }

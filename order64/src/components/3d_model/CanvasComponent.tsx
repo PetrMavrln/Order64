@@ -10,9 +10,9 @@ const CanvasComponent = ({ position, rotation, scale, name }: IMeshComponenct) =
     <Canvas className={styles.canvas}>
       <Suspense fallback={null}>
         <OrbitControls autoRotate />
-        <ambientLight intensity={0.1} />
-        <pointLight position={[-20, 15, -25]} />
-        <pointLight position={[10, 10, 10]} />
+        <ambientLight intensity={0.7} />
+        <pointLight position={[-20, 15, -25]} intensity={1} />
+        <pointLight position={[10, 10, 10]} intensity={1} />
         <LionMeshComponent position={position} rotation={rotation} scale={scale} name={name} />
       </Suspense>
     </Canvas>
