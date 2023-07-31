@@ -12,7 +12,7 @@ import ModalComponent from './modal/ModalComponent';
 import LoadingComponent from './LoadingComponent';
 
 const HeaderComponent = () => {
-  const CanvasComponent = lazy(() => import('./3d_model/CanvasComponent'));
+  const LazyCanvasComponent = lazy(() => import('./3d_model/CanvasComponent'));
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -77,7 +77,7 @@ const HeaderComponent = () => {
           }}>
           <Suspense fallback={<LoadingComponent />}>
             <div className={modalStyles.modalBgFix}>
-              <CanvasComponent
+              <LazyCanvasComponent
                 position={lions[1].position}
                 rotation={lions[1].rotation}
                 scale={lions[1].scale}
@@ -95,7 +95,7 @@ const HeaderComponent = () => {
           }}>
           <Suspense fallback={<LoadingComponent />}>
             <div className={modalStyles.modalBgFix}>
-              <CanvasComponent
+              <LazyCanvasComponent
                 position={lions[0].position}
                 rotation={lions[0].rotation}
                 scale={lions[0].scale}
