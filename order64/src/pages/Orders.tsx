@@ -60,18 +60,20 @@ const Orders = () => {
       <HelmetProvider>
         <Helmet>
           <title>Архитектурные ордера и их различие</title>
+          <meta
+            name="keywords"
+            content="ордер, барокко, рококо, модерн, классика, коринфский, дорический, ионический, композитный, восточный"
+          />
           <meta name="description" content="Архитектурные ордера и их различие" />
         </Helmet>
         <HeaderComponent />
         <div className={styles.wrapper}>
           <div className={styles.container}>
             <LeftPanelComponent />
-            <div className={styles.content}>
+            <main className={styles.content}>
               <ThematicBreakComponent />
-              <div className={styles.firstOlDiv}>
-                <ol>
-                  <li>Антаблемент моделируется индивидуально.</li>
-                </ol>
+              <div className={styles.notion}>
+                <div>Антаблемент моделируется индивидуально.</div>
               </div>
               <ThematicBreakComponent />
               <div className={styles.main}>
@@ -221,7 +223,7 @@ const Orders = () => {
                 </div>
                 <br />
               </div>
-            </div>
+            </main>
             <RightPanelComponent />
           </div>
         </div>

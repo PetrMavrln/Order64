@@ -24,13 +24,17 @@ const Payment = () => {
       <HelmetProvider>
         <Helmet>
           <title>Доставка, оплата</title>
+          <meta
+            name="keywords"
+            content="скульптор, дизайнер, архитектор, живопись, отделка, ремонт, реставрация, памятник, мастер, студия"
+          />
           <meta name="description" content="Доставка, оплата" />
         </Helmet>
         <HeaderComponent />
         <div className={styles.wrapper}>
           <div className={styles.container}>
             <LeftPanelComponent />
-            <div className={styles.content}>
+            <main className={styles.content}>
               <ThematicBreakComponent />
               <div className={styles.main}>
                 <div className={styles.header}>Доставка, оплата</div>
@@ -40,12 +44,12 @@ const Payment = () => {
                 </ol>
                 <address className={styles.address}>
                   <a href="tel:89085520985" className={styles.phone}>
-                    Сергей: 89085520985
+                    По всем вопросам - Сергей: 89085520985
                   </a>
                 </address>
               </div>
               <ThematicBreakComponent />
-            </div>
+            </main>
             <RightPanelComponent />
           </div>
         </div>

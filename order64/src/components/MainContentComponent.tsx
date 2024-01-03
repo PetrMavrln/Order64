@@ -11,14 +11,14 @@ const MainContent = () => {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <LeftPanelComponent />
-        <div className={styles.content}>
+        <main className={styles.content}>
           <ThematicBreakComponent />
           <OrderSystemThesisBlockComponent />
           <ThematicBreakComponent />
           <OrderLinksComponent />
           <ThematicBreakComponent />
           <OrderContactsComponent />
-        </div>
+        </main>
         <RightPanelComponent />
       </div>
     </div>

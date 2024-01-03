@@ -2,16 +2,23 @@
   max-width: 316px;
   margin: 0 auto 30px auto;
   text-align: center;
-  font-size: clamp(1.05rem, calc(0.2rem + 1.3vw), 1.25rem);
-  font-family: Montserrat, Roboto, system-ui, Tahoma, sans-serif; }
-  @media (max-width: 620px) {
-    .header {
-      margin-bottom: 15px; } }
+  font-size: clamp(1.05rem, 0.2rem + 1.3vw, 1.25rem);
+  font-family: "Playfair Display", Roboto, system-ui, Tahoma, sans-serif;
+}
+@media (max-width: 620px) {
+  .header {
+    margin-bottom: 15px;
+  }
+}
 
 .paragraph {
-  font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
+  font-size: clamp(0.675rem, 0.2rem + 0.85vw, 0.875rem);
   padding: 0 20px;
-  padding-bottom: 10px; }
-  .paragraph:last-of-type {
-    padding-top: 10px;
-    padding-bottom: 0; }
+  padding-bottom: 10px;
+}
+.paragraph:last-of-type {
+  padding-top: 10px;
+  padding-bottom: 0;
+}
+
+/*# sourceMappingURL=orderSystemThesis.module.css.map */

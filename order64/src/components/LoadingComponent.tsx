@@ -5,7 +5,7 @@ const LoadingComponent = () => {
     <div className={styles.wrapper}>
       <div className={styles.loaderBlock}>
         <div className={styles.loader}></div>
-        <div className={styles.text}>Идет загрузка</div>
+        <div className={styles.text}>Идет загрузка, подождите...</div>
       </div>
     </div>
   );

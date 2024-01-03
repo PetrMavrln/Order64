@@ -1,6 +1,7 @@
 .wrapper {
   max-width: 1285px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 .container {
   position: relative;
@@ -11,40 +12,85 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  overflow: hidden; }
-  .container .content {
-    margin: 0 auto;
-    width: 635px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background-color: #e2e2e2;
-    z-index: 1; }
-    .container .content .main {
-      font-family: 'Roboto Slab', Tahoma, serif;
-      font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
-      width: 100%;
-      padding: 0 30px; }
-      @media (max-width: 620px) {
-        .container .content .main {
-          padding: 0 5px; } }
-      .container .content .main .header {
-        font-family: Montserrat, Roboto, system-ui, Tahoma, sans-serif;
-        font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
-        padding: 5px 0;
-        text-align: center; }
-      .container .content .main ol {
-        padding: 10px 0;
-        padding-left: 20px;
-        list-style-type: circle; }
-      .container .content .main .link {
-        padding: 0 5px; }
-      .container .content .main .linkDiv {
-        text-align: center; }
+  overflow: hidden;
+}
+.container .content {
+  margin: 0 auto;
+  width: 635px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #e2e2e2;
+  z-index: 1;
+}
+.container .content .main {
+  font-family: "Roboto Slab", Tahoma, serif;
+  font-size: clamp(0.675rem, 0.2rem + 0.85vw, 0.875rem);
+  width: 100%;
+  padding: 0 30px;
+}
+@media (max-width: 620px) {
+  .container .content .main {
+    padding: 0 5px;
+  }
+}
+.container .content .main .header {
+  font-family: "Playfair Display", Roboto, system-ui, Tahoma, sans-serif;
+  font-size: clamp(1.05rem, 0.2rem + 1.3vw, 1.25rem);
+  padding: 5px 0;
+  text-align: center;
+}
+.container .content .main ol {
+  padding: 10px 0;
+  padding-left: 20px;
+  list-style-type: circle;
+}
+.container .content .main .link {
+  padding: 0 5px;
+  position: relative;
+  text-decoration: none;
+  color: rgb(10, 106, 138);
+}
+.container .content .main .link:visited {
+  color: rgb(78, 77, 76);
+}
+.container .content .main .link:hover::after {
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+  -ms-transform-origin: bottom left;
+  transform-origin: bottom left;
+}
+.container .content .main .link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #877065;
+  -webkit-transform-origin: bottom right;
+  -ms-transform-origin: bottom right;
+  transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  -o-transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+.container .content .main .linkDiv {
+  text-align: center;
+}
+
+/*# sourceMappingURL=stuccoPage.module.css.map */

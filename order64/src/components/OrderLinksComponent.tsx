@@ -12,11 +12,11 @@ const OrderLinksComponent = () => {
   ];
 
   return (
-    <div className={styles.orderLinks}>
+    <nav className={styles.orderLinks}>
       {orderLinks.map((link) => (
         <OrderLinkItemComponent key={link.id} link={link} />
       ))}
-    </div>
+    </nav>
   );
 };
 

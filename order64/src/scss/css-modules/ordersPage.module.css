@@ -1,6 +1,7 @@
 .wrapper {
   max-width: 1285px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 .container {
   position: relative;
@@ -11,90 +12,117 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  overflow: hidden; }
-  .container .content {
-    margin: 0 auto;
-    width: 635px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background-color: #e2e2e2;
-    z-index: 1; }
-    .container .content .firstOlDiv {
-      margin-right: auto;
-      width: 100%;
-      padding: 0 30px;
-      font-family: 'Roboto Slab', Tahoma, serif;
-      font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem); }
-      @media (max-width: 620px) {
-        .container .content .firstOlDiv {
-          padding: 0 5px; } }
-      .container .content .firstOlDiv > ol {
-        padding-left: 20px;
-        list-style-type: circle; }
-    .container .content .main {
-      font-family: 'Roboto Slab', Tahoma, serif;
-      font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
-      width: 100%;
-      padding: 0 30px; }
-      @media (max-width: 620px) {
-        .container .content .main {
-          padding: 0 5px; } }
-      .container .content .main .header,
-      .container .content .main .header2 {
-        font-family: Montserrat, Roboto, system-ui, Tahoma, sans-serif;
-        font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem); }
-      .container .content .main .header2 {
-        text-align: center;
-        margin-bottom: 10px; }
-      .container .content .main h2 {
-        margin-top: 10px;
-        font-weight: 500; }
-      .container .content .main ol {
-        padding: 10px 0;
-        padding-left: 20px;
-        list-style-type: circle; }
-      .container .content .main .subOl {
-        padding-top: 0;
-        padding-bottom: 0; }
-      .container .content .main:nth-of-type(3) ol:last-child {
-        padding-bottom: 0; }
-      .container .content .main:nth-of-type(3) > ol:nth-child(8) {
-        padding-bottom: 0; }
-      .container .content .main .imageCont {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        max-width: 635px;
-        margin: 20px auto 0 auto;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center; }
-        @media (max-width: 620px) {
-          .container .content .main .imageCont {
-            margin-top: 5px; } }
-        .container .content .main .imageCont .imgWrapper {
-          max-width: 32%;
-          margin-right: 5px; }
-          .container .content .main .imageCont .imgWrapper:last-of-type {
-            margin-right: 0; }
-      .container .content .main .imageContNoInt {
-        max-width: 635px;
-        margin: 20px auto 0 auto; }
-        @media (max-width: 620px) {
-          .container .content .main .imageContNoInt {
-            margin-top: 15px; } }
-        .container .content .main .imageContNoInt .imageNoInt {
-          width: 100%; }
+  overflow: hidden;
+}
+.container .content {
+  margin: 0 auto;
+  width: 635px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #e2e2e2;
+  z-index: 1;
+}
+.container .content .notion {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 30px;
+  font-family: "Roboto Slab", Tahoma, serif;
+  font-size: clamp(0.675rem, 0.2rem + 0.85vw, 0.875rem);
+}
+@media (max-width: 620px) {
+  .container .content .notion {
+    padding: 0 5px;
+  }
+}
+.container .content .notion > ol {
+  padding-left: 20px;
+}
+.container .content .main {
+  font-family: "Roboto Slab", Tahoma, serif;
+  font-size: clamp(0.675rem, 0.2rem + 0.85vw, 0.875rem);
+  width: 100%;
+  padding: 0 30px;
+}
+@media (max-width: 620px) {
+  .container .content .main {
+    padding: 0 5px;
+  }
+}
+.container .content .main .header,
+.container .content .main .header2 {
+  font-family: "Playfair Display", Roboto, system-ui, Tahoma, sans-serif;
+  font-size: clamp(1.05rem, 0.2rem + 1.3vw, 1.25rem);
+}
+.container .content .main .header2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.container .content .main h2 {
+  margin-top: 10px;
+  font-weight: 500;
+}
+.container .content .main ol {
+  padding: 10px 0;
+  padding-left: 20px;
+  list-style-type: circle;
+}
+.container .content .main .subOl {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.container .content .main:nth-of-type(3) ol:last-child {
+  padding-bottom: 0;
+}
+.container .content .main:nth-of-type(3) > ol:nth-child(8) {
+  padding-bottom: 0;
+}
+.container .content .main .imageCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 635px;
+  margin: 20px auto 0 auto;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@media (max-width: 620px) {
+  .container .content .main .imageCont {
+    margin-top: 5px;
+  }
+}
+.container .content .main .imageCont .imgWrapper {
+  max-width: 32%;
+  margin-right: 5px;
+}
+.container .content .main .imageCont .imgWrapper:last-of-type {
+  margin-right: 0;
+}
+.container .content .main .imageContNoInt {
+  max-width: 635px;
+  margin: 20px auto 0 auto;
+}
+@media (max-width: 620px) {
+  .container .content .main .imageContNoInt {
+    margin-top: 15px;
+  }
+}
+.container .content .main .imageContNoInt .imageNoInt {
+  width: 100%;
+}
+
+/*# sourceMappingURL=ordersPage.module.css.map */

@@ -85,7 +85,8 @@ video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
 article,
@@ -99,36 +100,42 @@ hgroup,
 menu,
 nav,
 section {
-  display: block; }
-
-body {
-  line-height: 1; }
+  display: block;
+}
 
 ol,
 ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote,
 q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
-  content: none; }
+  content: "";
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 /*--------------------------reset css-------------------------- end*/
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body,
 html {
   background-color: #dbdbdb;
-  font-family: Montserrat, Roboto, system-ui, Tahoma, sans-serif; }
+  font-family: "Playfair Display", Roboto, system-ui, Tahoma, sans-serif;
+}
+
+/*# sourceMappingURL=App.css.map */

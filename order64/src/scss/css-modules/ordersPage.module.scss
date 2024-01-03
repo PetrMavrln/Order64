@@ -32,9 +32,12 @@
     background-color: #e2e2e2;
     z-index: 1;
 
-    .firstOlDiv {
-      margin-right: auto;
-      width: 100%;
+    .notion {
+      // margin-right: auto;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      // width: 100%;
       padding: 0 30px;
       font-family: 'Roboto Slab', Tahoma, serif;
       font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
@@ -45,7 +48,7 @@
 
       & > ol {
         padding-left: 20px;
-        list-style-type: circle;
+        // list-style-type: circle;
       }
     }
     .main {
@@ -60,8 +63,9 @@
 
       .header,
       .header2 {
-        font-family: Montserrat, Roboto, system-ui, Tahoma, sans-serif;
-        font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
+        font-family: 'Playfair Display', Roboto, system-ui, Tahoma, sans-serif;
+        // font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
+        font-size: clamp(1.05rem, calc(0.2rem + 1.3vw), 1.25rem);
       }
 
       .header2 {

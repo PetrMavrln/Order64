@@ -30,7 +30,7 @@ const Stucco = () => {
         <div className={styles.wrapper}>
           <div className={styles.container}>
             <LeftPanelComponent />
-            <div className={styles.content}>
+            <main className={styles.content}>
               <ThematicBreakComponent />
               <div className={styles.main}>
                 <div className={styles.header}>Лепнина интерьерная</div>
@@ -57,7 +57,7 @@ const Stucco = () => {
                 </div>
               </div>
               <ThematicBreakComponent />
-            </div>
+            </main>
             <RightPanelComponent />
           </div>
         </div>

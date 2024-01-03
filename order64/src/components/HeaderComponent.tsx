@@ -7,9 +7,14 @@ import { Suspense, lazy, useEffect, useState } from 'react';
 import lion1 from '../assets/Lion1.png';
 import lion2 from '../assets/Lion2.png';
 import logo from '../assets/logo.svg';
+
 // import CanvasComponent from './3d_model/CanvasComponent';
 import ModalComponent from './modal/ModalComponent';
 import LoadingComponent from './LoadingComponent';
+
+// let lion1 = 'https://order164.ru/assets/Lion1.png';
+// let lion2 = 'https://order164.ru/assets/Lion2.png';
+// let logo = 'https://order164.ru/assets/logo.svg';
 
 const HeaderComponent = () => {
   const LazyCanvasComponent = lazy(() => import('./3d_model/CanvasComponent'));

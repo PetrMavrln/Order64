@@ -25,13 +25,17 @@ const Assortment = () => {
       <HelmetProvider>
         <Helmet>
           <title>Ассортимент колонн и цены</title>
+          <meta
+            name="keywords"
+            content="искусство, гипсовые, панно, бюст, рельеф, барельеф, композиция, проект, дизайн, камин"
+          />
           <meta name="description" content="Ассортимент колонн и цены" />
         </Helmet>
         <HeaderComponent />
         <div className={styles.wrapper}>
           <div className={styles.container}>
             <LeftPanelComponent />
-            <div className={styles.content}>
+            <main className={styles.content}>
               <ThematicBreakComponent />
               <div className={styles.header}>Ассортимент колонн и цены.</div>
               <div className={styles.description}>
@@ -68,7 +72,7 @@ const Assortment = () => {
               </div>
               <AssortmentCardsComponent />
               <ThematicBreakComponent />
-            </div>
+            </main>
             <RightPanelComponent />
           </div>
         </div>

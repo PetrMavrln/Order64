@@ -33,7 +33,9 @@
     z-index: 1;
 
     .header {
-      font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
+      font-family: 'Playfair Display', Roboto, system-ui, Tahoma, sans-serif;
+      font-size: clamp(1.05rem, calc(0.2rem + 1.3vw), 1.25rem);
+      // font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
       margin-bottom: 15px;
     }
 

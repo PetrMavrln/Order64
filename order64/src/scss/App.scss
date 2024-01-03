@@ -103,9 +103,9 @@ nav,
 section {
   display: block;
 }
-body {
-  line-height: 1;
-}
+// body {
+//   // line-height: 1;
+// }
 ol,
 ul {
   list-style: none;
@@ -136,5 +136,5 @@ table {
 body,
 html {
   background-color: #dbdbdb;
-  font-family: Montserrat, Roboto, system-ui, Tahoma, sans-serif;
+  font-family: 'Playfair Display', Roboto, system-ui, Tahoma, sans-serif;
 }

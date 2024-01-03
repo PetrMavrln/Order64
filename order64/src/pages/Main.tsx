@@ -21,6 +21,10 @@ const Main = () => {
       <HelmetProvider>
         <Helmet>
           <title>Order - художественная мастерская</title>
+          <meta
+            name="keywords"
+            content="колонны, колонна, лепнина, скульптура, львы, декор, интерьер, гипс, фибробетон, пластик"
+          />
           <meta name="description" content="Order - художественная мастерская" />
         </Helmet>
         <HeaderComponent />
