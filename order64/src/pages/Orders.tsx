@@ -8,6 +8,8 @@ import OrdersImageComponent from '../components/OrdersImageComponent';
 import RightPanelComponent from '../components/RightPanelComponent';
 import ThematicBreakComponent from '../components/ThematicBreakComponent';
 import styles from '../scss/css-modules/ordersPage.module.css';
+// import { useAppDispatch, useAppSelector } from '../hooks/redux';
+// import { fetchOrderPageImgs } from '../store/reducers/ActionCreators';
 
 const Orders = () => {
   const { pathname } = useLocation();
@@ -20,7 +22,15 @@ const Orders = () => {
     });
   }, [pathname]);
 
-  const imgArr = [
+  // const dispatch = useAppDispatch();
+
+  // useEffect(() => {
+  //   dispatch(fetchOrderPageImgs());
+  // }, []);
+
+  // const { orderPageImgs, isLoading } = useAppSelector((state) => state.orderPageImgsReducer);
+
+  const orderPageImgs = [
     {
       id: 0,
       alt: 'Триадная структура ордера',
@@ -53,7 +63,7 @@ const Orders = () => {
     },
   ];
 
-  const image4 = require(`../assets/orders/${imgArr[4].img}`);
+  const image4 = require(`../assets/orders/${orderPageImgs[4].img}`);
 
   return (
     <>
@@ -102,7 +112,7 @@ const Orders = () => {
                   <li>карниз</li>
                 </ol>
                 <div>База имеет плинт, торус (вал), трохилус (выкружка).</div>
-                <OrdersImageComponent img={imgArr[0]} />
+                <OrdersImageComponent img={orderPageImgs[0]} />
               </div>
               <ThematicBreakComponent />
               <div className={styles.main}>
@@ -147,16 +157,16 @@ const Orders = () => {
                   </li>
                   <li>Композитный ордер (Модульный)</li>
                 </ol>
-                <OrdersImageComponent img={imgArr[5]} />
+                <OrdersImageComponent img={orderPageImgs[5]} />
                 <div className={styles.imageCont}>
                   <div className={styles.imgWrapper}>
-                    <OrdersImageComponent img={imgArr[1]} />
+                    <OrdersImageComponent img={orderPageImgs[1]} />
                   </div>
                   <div className={styles.imgWrapper}>
-                    <OrdersImageComponent img={imgArr[2]} />
+                    <OrdersImageComponent img={orderPageImgs[2]} />
                   </div>
                   <div className={styles.imgWrapper}>
-                    <OrdersImageComponent img={imgArr[3]} />
+                    <OrdersImageComponent img={orderPageImgs[3]} />
                   </div>
                 </div>
               </div>
@@ -219,7 +229,7 @@ const Orders = () => {
                   аутентично и красиво.
                 </div>
                 <div className={styles.imageContNoInt}>
-                  <img src={image4} className={styles.imageNoInt} alt={imgArr[4].alt} />
+                  <img src={image4} className={styles.imageNoInt} alt={orderPageImgs[4].alt} />
                 </div>
                 <br />
               </div>

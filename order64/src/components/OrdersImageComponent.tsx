@@ -24,7 +24,8 @@ const OrdersImageComponent = ({ img }: { img: IImage }) => {
           shouldShow={showModal}
           onRequestClose={() => {
             setShowModal((prev) => !prev);
-          }}>
+          }}
+        >
           <img src={image} className={modalStyles.modalImg} alt="Рисунок изделия" />
         </ModalComponent>
       )}

@@ -34,6 +34,8 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  text-align: center;
+  width: fit-content;
   padding: 0 30px;
   font-family: "Roboto Slab", Tahoma, serif;
   font-size: clamp(0.675rem, 0.2rem + 0.85vw, 0.875rem);

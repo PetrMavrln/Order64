@@ -1,4 +1,4 @@
-export interface IOrder {
+export interface IOrderSystem {
   title: string;
   text: string;
 }

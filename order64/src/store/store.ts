@@ -11,9 +11,13 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import assortmentReducer from './reducers/AssortmentSlice';
+// import orderPageImgsReducer from './reducers/OrderPageImgsSlice';
+import orderSystemReducer from './reducers/OrderSystemSlice';
 
 const rootReducer = combineReducers({
   assortmentReducer,
+  // orderPageImgsReducer,
+  orderSystemReducer,
 });
 
 const persistConfig = {
