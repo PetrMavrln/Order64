@@ -108,7 +108,7 @@
   position: absolute;
   top: 0;
   font-family: "Playfair Display", Roboto, system-ui, Tahoma, sans-serif;
-  font-size: clamp(0.8rem, 0.2rem + 1vw, 1rem);
+  font-size: clamp(1.05rem, 0.2rem + 1.3vw, 1.25rem);
   text-align: center;
   padding: 15px 0;
   margin: auto 0;
@@ -129,6 +129,19 @@
   padding: 5px 0;
   position: absolute;
   bottom: 15px;
+}
+
+.card3dModel {
+  font-family: "Roboto Slab", Tahoma, serif;
+  font-size: clamp(0.8rem, 0.2rem + 1vw, 1rem);
+  text-align: center;
+  color: black;
+  padding: 5px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  border: 1px solid rgb(189, 189, 189);
+  background-color: rgba(189, 189, 189, 0.3);
 }
 
 /*# sourceMappingURL=modal.module.css.map */

@@ -3,4 +3,8 @@ export interface IAssortmentItem {
   title: string;
   price: number;
   img: string;
+  ModelName: string;
+  position: [];
+  rotation: [];
+  scale: number;
 }

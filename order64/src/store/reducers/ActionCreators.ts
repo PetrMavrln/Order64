@@ -1,14 +1,13 @@
 import axios from 'axios';
 import { IAssortmentItem } from '../../models/IAssortmentItem';
+import { IOrderSystem } from '../../models/IOrderSystem';
 import { AppDispatch } from '../store';
 import { assortmentSlice } from './AssortmentSlice';
-import { orderPageImgsSlice } from './OrderPageImgsSlice';
-import { IOrderPageImgs } from '../../models/IOrderPageImgs';
 import { orderSystemSlice } from './OrderSystemSlice';
-import { IOrderSystem } from '../../models/IOrderSystem';
 
 export const fetchAssortment = () => async (dispatch: AppDispatch) => {
   let url = 'https://order164.ru/json/assortment.json';
+  // let url = 'http://127.0.0.1:5500/json/assortment.json';
   try {
     dispatch(assortmentSlice.actions.assortmentFetching());
     const response = await axios.get<IAssortmentItem[]>(url);
@@ -38,4 +37,4 @@ export const fetchOrderSystem = () => async (dispatch: AppDispatch) => {
   } catch (e: any) {
     dispatch(orderSystemSlice.actions.orderSystemFetchingError(e.message));
   }
-};
+}

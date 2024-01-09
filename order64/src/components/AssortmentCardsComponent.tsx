@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../hooks/redux';
 import styles from '../scss/css-modules/assortmentCards.module.css';
-import AssortmentCardComponent from './AssortmentCardComponent';
 import { fetchAssortment } from '../store/reducers/ActionCreators';
+import AssortmentCardComponent from './AssortmentCardComponent';
 import LoadingComponent from './LoadingComponent';
 
 const AssortmentCardsComponent = () => {
@@ -15,6 +15,7 @@ const AssortmentCardsComponent = () => {
   const { assortment, isLoading } = useAppSelector((state) => state.assortmentReducer);
 
   //копия массива assortment (через slice) и сортировка по цене:
+
   const assortmentSorted = assortment.slice().sort((a, b) => (a.price > b.price ? 1 : -1));
   return (
     <div className={styles.cards}>
