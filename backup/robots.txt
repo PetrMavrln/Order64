@@ -1,4 +1,0 @@
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Disallow:
-Sitemap: https://https://order164.ru/sitemap.xml
