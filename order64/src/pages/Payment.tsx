@@ -37,7 +37,7 @@ const Payment = () => {
             <main className={styles.content}>
               <ThematicBreakComponent />
               <div className={styles.main}>
-                <div className={styles.header}>Доставка, оплата</div>
+                <h2 className={styles.header}>Доставка, оплата</h2>
                 <ol>
                   <li>Доставка нашим транспортом и транспортными компаниями.</li>
                   <li>Оплата наличным и безналичным расчётом.</li>

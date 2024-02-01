@@ -87,9 +87,9 @@ const Orders = () => {
               </div>
               <ThematicBreakComponent />
               <div className={styles.main}>
-                <div className={styles.header2}>
+                <h2 className={styles.header}>
                   Архитектурный ордер - порядок связей архитектурных элементов.
-                </div>
+                </h2>
                 <div>
                   В традиционном понимании архитектурный ордер имеет триадную структуру: все его
                   части, большие и малые, делятся на три:
@@ -116,7 +116,7 @@ const Orders = () => {
               </div>
               <ThematicBreakComponent />
               <div className={styles.main}>
-                <div className={styles.header}>Ордерные системы:</div>
+                <h2 className={styles.header}>Ордерные системы</h2>
                 <h2>Греческие ордеры</h2>
                 <ol>
                   <li>Греческий дорический ордер</li>
@@ -172,7 +172,7 @@ const Orders = () => {
               </div>
               <ThematicBreakComponent />
               <div className={styles.main}>
-                <div className={styles.header2}>Элементы классического ордера</div>
+                <h2 className={styles.header}>Элементы классического ордера</h2>
                 <div>
                   Все части классического ордера имеют триадную структуру. Так основных частей три:
                   основание (опорная часть), несущая и несомая. Каждая часть также делится на три.

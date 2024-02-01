@@ -33,7 +33,7 @@ const Stucco = () => {
             <main className={styles.content}>
               <ThematicBreakComponent />
               <div className={styles.main}>
-                <div className={styles.header}>Лепнина интерьерная</div>
+                <h2 className={styles.header}>Лепнина интерьерная</h2>
                 <ol>
                   <li>
                     Пройдя по ссылке ниже Вы можете ознакомиться с подборкой лепнины уже в
@@ -51,7 +51,8 @@ const Stucco = () => {
                     className={styles.link}
                     href="https://order64.ru/"
                     target="_blank"
-                    rel="noreferrer">
+                    rel="noreferrer"
+                  >
                     ссылке
                   </a>
                 </div>

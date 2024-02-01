@@ -13,9 +13,9 @@ const MainContent = () => {
         <LeftPanelComponent />
         <main className={styles.content}>
           <ThematicBreakComponent />
-          <OrderSystemThesisBlockComponent />
-          <ThematicBreakComponent />
           <OrderLinksComponent />
+          <ThematicBreakComponent />
+          <OrderSystemThesisBlockComponent />
           <ThematicBreakComponent />
           <OrderContactsComponent />
         </main>

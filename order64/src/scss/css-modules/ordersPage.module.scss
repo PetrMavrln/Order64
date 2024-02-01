@@ -33,28 +33,23 @@
     z-index: 1;
 
     .notion {
-      // margin-right: auto;
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
       text-align: center;
       width: fit-content;
       padding: 0 30px;
-      font-family: 'Roboto Slab', Tahoma, serif;
-      font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
 
       @media (max-width: 620px) {
         padding: 0 5px;
       }
 
-      & > ol {
+      &>ol {
         padding-left: 20px;
-        // list-style-type: circle;
       }
     }
+
     .main {
-      font-family: 'Roboto Slab', Tahoma, serif;
-      font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
       width: 100%;
       padding: 0 30px;
 
@@ -62,14 +57,9 @@
         padding: 0 5px;
       }
 
-      .header,
-      .header2 {
-        font-family: 'Playfair Display', Roboto, system-ui, Tahoma, sans-serif;
-        // font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
-        font-size: clamp(1.05rem, calc(0.2rem + 1.3vw), 1.25rem);
-      }
-
-      .header2 {
+      .header {
+        font-family: 'Playfair Display', "Times New Roman", system-ui, Tahoma, serif;
+        font-size: clamp(1.205rem, calc(0.5rem + 1.25vw), 1.415rem);
         text-align: center;
         margin-bottom: 10px;
       }
@@ -84,6 +74,7 @@
         padding-left: 20px;
         list-style-type: circle;
       }
+
       .subOl {
         padding-top: 0;
         padding-bottom: 0;
@@ -98,7 +89,7 @@
       }
 
       &:nth-of-type(3) {
-        & > ol:nth-child(8) {
+        &>ol:nth-child(8) {
           padding-bottom: 0;
         }
       }

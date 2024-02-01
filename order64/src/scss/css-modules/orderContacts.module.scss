@@ -24,7 +24,7 @@
 }
 
 .orderContactsHeader {
-  font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
+  font-size: clamp(1.205rem, calc(0.5rem + 1.25vw), 1.415rem);
   text-align: center;
   margin-bottom: 30px;
 
@@ -32,6 +32,7 @@
     margin-bottom: 15px;
   }
 }
+
 .contactNumber {
   position: relative;
   width: -webkit-fit-content;
@@ -42,7 +43,6 @@
   color: inherit;
   text-decoration: none;
   margin-top: 5px;
-  font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
 
   &:hover {
     &::after {

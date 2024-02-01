@@ -1,4 +1,4 @@
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styles from '../scss/css-modules/header.module.css';
 import modalStyles from '../scss/css-modules/modal/modal.module.css';
 import { MAIN_ROUTE } from '../utils/consts';
@@ -8,19 +8,13 @@ import lion1 from '../assets/Lion1.png';
 import lion2 from '../assets/Lion2.png';
 import logo from '../assets/logo.svg';
 
-// import CanvasComponent from './3d_model/CanvasComponent';
-import ModalComponent from './modal/ModalComponent';
 import LoadingComponent from './LoadingComponent';
-
-// let lion1 = 'https://order164.ru/assets/Lion1.png';
-// let lion2 = 'https://order164.ru/assets/Lion2.png';
-// let logo = 'https://order164.ru/assets/logo.svg';
+import ModalComponent from './modal/ModalComponent';
 
 const HeaderComponent = () => {
   const LazyCanvasComponent = lazy(() => import('./3d_model/CanvasComponent'));
 
   const navigate = useNavigate();
-  const location = useLocation();
 
   const [showModal1, setShowModal1] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
@@ -63,7 +57,6 @@ const HeaderComponent = () => {
         />
         <img src={lion1} className={styles.lion1} alt="Lion" onClick={() => setShowModal1(true)} />
         <img src={lion2} className={styles.lion2} alt="Lion" onClick={() => setShowModal2(true)} />
-        {location.pathname === MAIN_ROUTE ? <h1>Архитектурные ордера</h1> : <h2> </h2>}
         <address className={styles.contacts}>
           Саратов, 1-ый Проезд строителей 12
           <a href="tel:89085520984" className={styles.phone}>
@@ -79,7 +72,8 @@ const HeaderComponent = () => {
           shouldShow={showModal2}
           onRequestClose={() => {
             setShowModal2((prev) => !prev);
-          }}>
+          }}
+        >
           <Suspense fallback={<LoadingComponent />}>
             <div className={modalStyles.modalBgFix}>
               <LazyCanvasComponent
@@ -97,7 +91,8 @@ const HeaderComponent = () => {
           shouldShow={showModal1}
           onRequestClose={() => {
             setShowModal1((prev) => !prev);
-          }}>
+          }}
+        >
           <Suspense fallback={<LoadingComponent />}>
             <div className={modalStyles.modalBgFix}>
               <LazyCanvasComponent

@@ -1,9 +1,7 @@
 .cardItem {
   max-width: 250px;
-  // border: 1px solid rgba(134, 134, 134, 0.5);
   border: 1px solid rgb(189, 189, 189);
   background-color: #dbdbdb;
-  // background-color: rgb(200, 158, 98);
   margin: 0 5px 30px 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30,29 +28,30 @@
 
   &:hover {
     cursor: pointer;
+
     .img {
       -webkit-transform: scale(1.05);
       -ms-transform: scale(1.05);
       transform: scale(1.05);
     }
+
     .card3dModel {
       opacity: 1;
     }
   }
 
   .cardHeader {
-    // font-family: 'Roboto Slab', Tahoma, serif;
-    font-family: 'Playfair Display', Roboto, system-ui, Tahoma, sans-serif;
-    font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
-    // font-weight: 400;
+    // font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
     text-align: center;
     padding: 5px 0;
     margin: auto 0;
   }
+
   .imgContainer {
     overflow: hidden;
     position: relative;
   }
+
   .img {
     width: 100%;
     height: 100%;
@@ -65,8 +64,7 @@
   }
 
   .card3dModel {
-    font-family: 'Roboto Slab', Tahoma, serif;
-    font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
+    // font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
     position: absolute;
     bottom: 10px;
     right: 0;
@@ -91,19 +89,17 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack:  distribute;
-    justify-content:  space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
   }
 
   .cardNumber {
-    font-family: 'Roboto Slab', Tahoma, serif;
-    font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
+    // font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
     margin: auto 0 auto 5px;
   }
 
   .cardPrice {
-    font-family: 'Roboto Slab', Tahoma, serif;
-    font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
+    // font-size: clamp(0.675rem, calc(0.2rem + 0.85vw), 0.875rem);
     padding: 5px 0;
     margin: 0 auto;
     // width: -webkit-fit-content;

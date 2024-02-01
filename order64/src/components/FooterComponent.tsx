@@ -5,7 +5,6 @@ const FooterComponent = () => {
   return (
     <>
       <div className={styles.copyright}>ORDER64 © 2001-2024</div>
-      {/* <div className={styles.author}>Сайт создан ...(автор и контакты)</div> */}
     </>
   );
 };

@@ -36,7 +36,7 @@ const AssortmentCardComponent = ({ card, index }: { card: IAssortmentItem; index
   return (
     <>
       <div className={styles.cardItem} onClick={() => setShowModal(true)}>
-        <div className={styles.cardHeader}>{card.title}</div>
+        <h2 className={styles.cardHeader}>{card.title}</h2>
         <div className={styles.imgContainer}>
           <img src={image} className={styles.img} alt="Рисунок изделия" />
           {/* условная отрисовка кнопки "3д модель" если задано имя модели в json*/}
@@ -68,7 +68,7 @@ const AssortmentCardComponent = ({ card, index }: { card: IAssortmentItem; index
         >
           <div className={modalStyles.modalWrap}>
             <img src={image} className={modalStyles.modalImg} alt="Рисунок изделия" />
-            <div className={modalStyles.modalHeader}>{card.title}</div>
+            <h2 className={modalStyles.modalHeader}>{card.title}</h2>
             <div className={modalStyles.modalNumber}>{index + 1}</div>
             <div className={modalStyles.modalPrice}>цена {card.price} р.</div>
             {typeof card.ModelName === 'string' && card.ModelName.length === 0 ? (

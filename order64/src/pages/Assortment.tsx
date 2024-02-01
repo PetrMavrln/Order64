@@ -37,7 +37,7 @@ const Assortment = () => {
             <LeftPanelComponent />
             <main className={styles.content}>
               <ThematicBreakComponent />
-              <div className={styles.header}>Ассортимент колонн и цены.</div>
+              <h2 className={styles.header}>Ассортимент колонн и цены.</h2>
               <div className={styles.description}>
                 Для Ваших интерьеров мы изготавливаем колонны исключительно из экологически чистого,
                 безопасного и особо крепкого гипса (марки г16). В производстве не используются

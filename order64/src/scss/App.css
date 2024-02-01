@@ -135,7 +135,17 @@ table {
 body,
 html {
   background-color: #dbdbdb;
-  font-family: "Playfair Display", Roboto, system-ui, Tahoma, sans-serif;
+  font-family: Roboto, system-ui, Tahoma, sans-serif;
+  font-size: clamp(0.935rem, 0.15rem + 1.25vw, 1.06rem);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", "Times New Roman", system-ui, Tahoma, serif;
 }
 
 /*# sourceMappingURL=App.css.map */

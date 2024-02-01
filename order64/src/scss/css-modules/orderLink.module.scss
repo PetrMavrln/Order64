@@ -1,11 +1,16 @@
 .link {
   position: relative;
   display: inline-block;
-  font-size: clamp(0.8rem, calc(0.2rem + 1vw), 1rem);
+  font-family: 'Playfair Display', "Times New Roman", system-ui, Tahoma, serif;
+  font-size: clamp(1.205rem, calc(0.5rem + 1.25vw), 1.215rem);
   margin-bottom: 30px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+
+  @media (max-width: 500px) {
+    margin-bottom: 15px;
+  }
 
   &:hover {
     cursor: pointer;
@@ -29,6 +34,10 @@
     height: 20px;
     top: 0px;
     left: -34px;
+
+    @media (max-width: 500px) {
+      display: none;
+    }
   }
 
   &::after {

@@ -107,24 +107,19 @@
 .modalHeader {
   position: absolute;
   top: 0;
-  font-family: "Playfair Display", Roboto, system-ui, Tahoma, sans-serif;
-  font-size: clamp(1.05rem, 0.2rem + 1.3vw, 1.25rem);
+  font-size: clamp(1.205rem, 0.5rem + 1.25vw, 1.415rem);
   text-align: center;
   padding: 15px 0;
   margin: auto 0;
 }
 
 .modalNumber {
-  font-family: "Roboto Slab", Tahoma, serif;
-  font-size: clamp(0.8rem, 0.2rem + 1vw, 1rem);
   position: absolute;
   bottom: 15px;
   left: 15px;
 }
 
 .modalPrice {
-  font-family: "Roboto Slab", Tahoma, serif;
-  font-size: clamp(0.8rem, 0.2rem + 1vw, 1rem);
   text-align: center;
   padding: 5px 0;
   position: absolute;
@@ -132,8 +127,6 @@
 }
 
 .card3dModel {
-  font-family: "Roboto Slab", Tahoma, serif;
-  font-size: clamp(0.8rem, 0.2rem + 1vw, 1rem);
   text-align: center;
   color: black;
   padding: 5px;

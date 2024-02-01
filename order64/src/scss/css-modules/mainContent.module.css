@@ -1,11 +1,11 @@
 .wrapper {
-  max-width: 1285px;
+  max-width: 1270px;
   margin: 0 auto;
 }
 
 .container {
   position: relative;
-  margin: 0 15px;
+  margin: 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,7 +15,6 @@
   overflow: hidden;
 }
 .container .content {
-  font-family: "Roboto Slab", Tahoma, serif;
   margin: 0 auto;
   width: 635px;
   display: -webkit-box;

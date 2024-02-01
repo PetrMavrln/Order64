@@ -14,6 +14,7 @@ import {
   ORDERS_ROUTE,
   PAYMENT_ROUTE,
   STUCCO_ROUTE,
+  COLONNADE_ROUTE,
 } from './utils/consts';
 
 const LazyAssortment = lazy(() => import('./pages/Assortment'));
@@ -21,6 +22,7 @@ const LazyEntablature = lazy(() => import('./pages/Entablature'));
 const LazyOrders = lazy(() => import('./pages/Orders'));
 const LazyPayment = lazy(() => import('./pages/Payment'));
 const LazyStucco = lazy(() => import('./pages/Stucco'));
+const LazyColonnade = lazy(() => import('./pages/Colonnade'));
 
 // export const publicRoutes = [
 //   { path: MAIN_ROUTE, Component: Main },
@@ -38,4 +40,5 @@ export const publicRoutes = [
   { path: ORDERS_ROUTE, Component: LazyOrders },
   { path: PAYMENT_ROUTE, Component: LazyPayment },
   { path: STUCCO_ROUTE, Component: LazyStucco },
+  { path: COLONNADE_ROUTE, Component: LazyColonnade },
 ];

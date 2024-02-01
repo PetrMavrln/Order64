@@ -15,7 +15,7 @@ const OrderSystemThesisBlockComponent = () => {
 
   return (
     <div>
-      <div className={styles.header}>Ордерная система - главное наследие античности</div>
+      <h2 className={styles.header}>Ордерная система - главное наследие античности</h2>
       <PComponent order={orderSystem[0]} />
       <div className={styles.paragraph}>
         Давайте посмотрим, как ордер помогает нам воспринимать здание.
