@@ -30,19 +30,19 @@
   background-color: #e2e2e2;
   z-index: 1;
 }
+@media (max-width: 650px) {
+  .container .content {
+    width: 100%;
+  }
+}
 .container .content .main {
   width: 100%;
   padding: 0 30px;
 }
-@media (max-width: 620px) {
+@media (max-width: 650px) {
   .container .content .main {
     padding: 0 5px;
   }
-}
-.container .content .main .header {
-  font-size: clamp(1.205rem, 0.5rem + 1.25vw, 1.415rem);
-  padding: 5px 0;
-  text-align: center;
 }
 .container .content .main ol {
   padding: 10px 0;
@@ -58,6 +58,33 @@
 .container .b {
   font-weight: bold;
   font-style: italic;
+}
+
+.header {
+  font-size: clamp(1.205rem, 0.5rem + 1.25vw, 1.415rem);
+  padding: 5px 0;
+  text-align: center;
+}
+
+.carousel {
+  width: 95%;
+  height: auto;
+}
+
+.mySwiper {
+  width: 95%;
+  height: auto;
+  margin-top: 30px;
+}
+@media (max-width: 620px) {
+  .mySwiper {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+.swiperSlide {
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=colonnadePage.module.css.map */
