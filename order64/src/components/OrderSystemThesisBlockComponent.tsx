@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
-import PComponent from './PComponent';
-import styles from '../scss/css-modules/orderSystemThesis.module.css';
-import { useAppDispatch, useAppSelector } from '../hooks/redux';
-import { fetchOrderSystem } from '../store/reducers/ActionCreators';
+import React, { useEffect } from "react";
+import PComponent from "./PComponent";
+import styles from "../scss/scss-modules/orderSystemThesis.module.scss";
+import { useAppDispatch, useAppSelector } from "../hooks/redux";
+import { fetchOrderSystem } from "../store/reducers/ActionCreators";
 
 const OrderSystemThesisBlockComponent = () => {
   const dispatch = useAppDispatch();

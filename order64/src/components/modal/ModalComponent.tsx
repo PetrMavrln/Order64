@@ -1,4 +1,4 @@
-import styles from '../../scss/css-modules/modal/modal.module.css';
+import styles from "../../scss/scss-modules/modal/modal.module.scss";
 
 const ModalComponent = ({
   shouldShow,
@@ -17,7 +17,8 @@ const ModalComponent = ({
           className={styles.modal}
           onClick={(e) => {
             e.stopPropagation();
-          }}>
+          }}
+        >
           <button className={styles.closeBtn} onClick={onRequestClose}></button>
           <div className={styles.modalContent}>{children}</div>
         </div>

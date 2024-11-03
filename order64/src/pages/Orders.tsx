@@ -1,13 +1,13 @@
-import { useEffect } from 'react';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
-import { useLocation } from 'react-router-dom';
-import FooterComponent from '../components/FooterComponent';
-import HeaderComponent from '../components/HeaderComponent';
-import LeftPanelComponent from '../components/LeftPanelComponent';
-import OrdersImageComponent from '../components/OrdersImageComponent';
-import RightPanelComponent from '../components/RightPanelComponent';
-import ThematicBreakComponent from '../components/ThematicBreakComponent';
-import styles from '../scss/css-modules/ordersPage.module.css';
+import { useEffect } from "react";
+import { Helmet, HelmetProvider } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
+import FooterComponent from "../components/FooterComponent";
+import HeaderComponent from "../components/HeaderComponent";
+import LeftPanelComponent from "../components/LeftPanelComponent";
+import OrdersImageComponent from "../components/OrdersImageComponent";
+import RightPanelComponent from "../components/RightPanelComponent";
+import ThematicBreakComponent from "../components/ThematicBreakComponent";
+import styles from "../scss/scss-modules/ordersPage.module.scss";
 // import { useAppDispatch, useAppSelector } from '../hooks/redux';
 // import { fetchOrderPageImgs } from '../store/reducers/ActionCreators';
 
@@ -18,7 +18,7 @@ const Orders = () => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   }, [pathname]);
 
@@ -33,33 +33,33 @@ const Orders = () => {
   const orderPageImgs = [
     {
       id: 0,
-      alt: 'Триадная структура ордера',
-      img: '1_.jpg',
+      alt: "Триадная структура ордера",
+      img: "1_.jpg",
     },
     {
       id: 1,
-      alt: 'Римские ордеры',
-      img: '2.1.png',
+      alt: "Римские ордеры",
+      img: "2.1.png",
     },
     {
       id: 2,
-      alt: 'Римские ордеры',
-      img: '2.2.jpg',
+      alt: "Римские ордеры",
+      img: "2.2.jpg",
     },
     {
       id: 3,
-      alt: 'Римские ордеры',
-      img: '2.3.png',
+      alt: "Римские ордеры",
+      img: "2.3.png",
     },
     {
       id: 4,
-      alt: 'Разница между колоннами',
-      img: '3.png',
+      alt: "Разница между колоннами",
+      img: "3.png",
     },
     {
       id: 5,
-      alt: 'Римские ордеры',
-      img: '2.jpg',
+      alt: "Римские ордеры",
+      img: "2.jpg",
     },
   ];
 

@@ -1,6 +1,6 @@
-import React from 'react';
-import styles from '../scss/css-modules/p.module.css';
-import { IOrderSystem } from '../models/IOrderSystem';
+import React from "react";
+import styles from "../scss/scss-modules/p.module.scss";
+import { IOrderSystem } from "../models/IOrderSystem";
 
 const PComponent = ({ order }: { order: IOrderSystem }) => {
   return (

@@ -1,19 +1,19 @@
-import { Suspense, lazy, useEffect, useState } from 'react';
-import { IAssortmentItem } from '../models/IAssortmentItem';
-import styles from '../scss/css-modules/assortmentCard.module.css';
-import modalStyles from '../scss/css-modules/modal/modal.module.css';
-import LoadingComponent from './LoadingComponent';
-import ModalComponent from './modal/ModalComponent';
+import { Suspense, lazy, useEffect, useState } from "react";
+import { IAssortmentItem } from "../models/IAssortmentItem";
+import styles from "../scss/scss-modules/assortmentCard.module.scss";
+import modalStyles from "../scss/scss-modules/modal/modal.module.scss";
+import LoadingComponent from "./LoadingComponent";
+import ModalComponent from "./modal/ModalComponent";
 
 const AssortmentCardComponent = ({ card, index }: { card: IAssortmentItem; index: number }) => {
   // 3sd columns ----------------------------------------------------------------
-  const LazyCanvasComponent = lazy(() => import('./3d_model/CanvasColumnComponent'));
+  const LazyCanvasComponent = lazy(() => import("./3d_model/CanvasColumnComponent"));
 
   const [showModalColumn, setShowModalColumn] = useState(false);
 
   useEffect(() => {
-    showModalColumn && (document.body.style.overflow = 'hidden');
-    !showModalColumn && (document.body.style.overflow = 'unset');
+    showModalColumn && (document.body.style.overflow = "hidden");
+    !showModalColumn && (document.body.style.overflow = "unset");
   }, [showModalColumn]);
 
   function stopProp(e: any) {
@@ -29,8 +29,8 @@ const AssortmentCardComponent = ({ card, index }: { card: IAssortmentItem; index
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    showModal && (document.body.style.overflow = 'hidden');
-    !showModal && (document.body.style.overflow = 'unset');
+    showModal && (document.body.style.overflow = "hidden");
+    !showModal && (document.body.style.overflow = "unset");
   }, [showModal]);
 
   return (
@@ -40,7 +40,7 @@ const AssortmentCardComponent = ({ card, index }: { card: IAssortmentItem; index
         <div className={styles.imgContainer}>
           <img src={image} className={styles.img} alt="Рисунок изделия" />
           {/* условная отрисовка кнопки "3д модель" если задано имя модели в json*/}
-          {typeof card.ModelName === 'string' && card.ModelName.length === 0 ? (
+          {typeof card.ModelName === "string" && card.ModelName.length === 0 ? (
             <></>
           ) : (
             <div
@@ -71,7 +71,7 @@ const AssortmentCardComponent = ({ card, index }: { card: IAssortmentItem; index
             <h2 className={modalStyles.modalHeader}>{card.title}</h2>
             <div className={modalStyles.modalNumber}>{index + 1}</div>
             <div className={modalStyles.modalPrice}>цена {card.price} р.</div>
-            {typeof card.ModelName === 'string' && card.ModelName.length === 0 ? (
+            {typeof card.ModelName === "string" && card.ModelName.length === 0 ? (
               <></>
             ) : (
               <div className={modalStyles.card3dModel} onClick={() => setShowModalColumn(true)}>

@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
-import { IImage } from '../models/IImage';
-import modalStyles from '../scss/css-modules/modal/modal.module.css';
-import styles from '../scss/css-modules/ordersImage.module.css';
-import ModalComponent from './modal/ModalComponent';
+import { useEffect, useState } from "react";
+import { IImage } from "../models/IImage";
+import modalStyles from "../scss/scss-modules/modal/modal.module.scss";
+import styles from "../scss/scss-modules/ordersImage.module.scss";
+import ModalComponent from "./modal/ModalComponent";
 
 const OrdersImageComponent = ({ img }: { img: IImage }) => {
   const image = require(`../assets/orders/${img.img}`);
@@ -10,8 +10,8 @@ const OrdersImageComponent = ({ img }: { img: IImage }) => {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    showModal && (document.body.style.overflow = 'hidden');
-    !showModal && (document.body.style.overflow = 'unset');
+    showModal && (document.body.style.overflow = "hidden");
+    !showModal && (document.body.style.overflow = "unset");
   }, [showModal]);
 
   return (

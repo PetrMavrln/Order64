@@ -25,20 +25,15 @@
     "react-scripts": "5.0.1",
     "redux-persist": "^6.0.0",
     "swiper": "^11.0.5",
-    "three": "^0.154.0",
+    "three": "^0.170.0",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "build:css": "sass src/ ",
-    "watch:css": "npm run build:css && sass src/ -w -r",
-    "start:js": "react-scripts-ts start",
-    "startOld": "react-scripts start",
-    "start": "npm-run-all -p watch:css start:js",
-    "build:js": "react-scripts build",
-    "build": "npm-run-all build:*",
-    "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {

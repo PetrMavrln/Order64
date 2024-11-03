@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
-import HeaderComponent from '../components/HeaderComponent';
-import FooterComponent from '../components/FooterComponent';
-import styles from '../scss/css-modules/paymentPage.module.css';
-import { useLocation } from 'react-router-dom';
-import LeftPanelComponent from '../components/LeftPanelComponent';
-import ThematicBreakComponent from '../components/ThematicBreakComponent';
-import RightPanelComponent from '../components/RightPanelComponent';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import React, { useEffect } from "react";
+import HeaderComponent from "../components/HeaderComponent";
+import FooterComponent from "../components/FooterComponent";
+import styles from "../scss/scss-modules/paymentPage.module.scss";
+import { useLocation } from "react-router-dom";
+import LeftPanelComponent from "../components/LeftPanelComponent";
+import ThematicBreakComponent from "../components/ThematicBreakComponent";
+import RightPanelComponent from "../components/RightPanelComponent";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const Payment = () => {
   const { pathname } = useLocation();
@@ -15,7 +15,7 @@ const Payment = () => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   }, [pathname]);
 

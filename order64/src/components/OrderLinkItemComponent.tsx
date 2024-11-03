@@ -1,7 +1,7 @@
-import React from 'react';
-import { IOrderLink } from '../models/IOrderLink';
-import styles from '../scss/css-modules/orderLink.module.css';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import { IOrderLink } from "../models/IOrderLink";
+import styles from "../scss/scss-modules/orderLink.module.scss";
+import { useNavigate } from "react-router-dom";
 
 const OrderLinkItemComponent = ({ link }: { link: IOrderLink }) => {
   const navigate = useNavigate();
@@ -10,7 +10,8 @@ const OrderLinkItemComponent = ({ link }: { link: IOrderLink }) => {
       className={styles.link}
       onClick={() => {
         navigate(link.route);
-      }}>
+      }}
+    >
       {link.title}
     </div>
   );

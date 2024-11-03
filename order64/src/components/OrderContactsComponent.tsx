@@ -1,12 +1,12 @@
-import { IOrderContacts } from '../models/IOrderContacts';
-import styles from '../scss/css-modules/orderContacts.module.css';
+import { IOrderContacts } from "../models/IOrderContacts";
+import styles from "../scss/scss-modules/orderContacts.module.scss";
 
 const OrderContactsComponent = () => {
   const orderContacts = [
-    { id: 0, title: 'Тел. Архитектор: ', number: '89085520985', name: ' - Сергей' },
-    { id: 1, title: 'Тел. Дизайнер: ', number: '89626225577', name: ' - Ольга' },
-    { id: 2, title: 'Тел. Художник: ', number: '89873343415', name: ' - Андрей' },
-    { id: 3, title: 'Тел. Цех: ', number: '89878033963', name: ' - Антон' },
+    { id: 0, title: "Тел. Архитектор: ", number: "89085520985", name: " - Сергей" },
+    { id: 1, title: "Тел. Дизайнер: ", number: "89626225577", name: " - Ольга" },
+    { id: 2, title: "Тел. Художник: ", number: "89873343415", name: " - Андрей" },
+    { id: 3, title: "Тел. Цех: ", number: "89878033963", name: " - Антон" },
   ];
 
   return (

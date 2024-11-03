@@ -1,9 +1,9 @@
-import { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '../hooks/redux';
-import styles from '../scss/css-modules/assortmentCards.module.css';
-import { fetchAssortment } from '../store/reducers/ActionCreators';
-import AssortmentCardComponent from './AssortmentCardComponent';
-import LoadingComponent from './LoadingComponent';
+import { useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "../hooks/redux";
+import styles from "../scss/scss-modules/assortmentCards.module.scss";
+import { fetchAssortment } from "../store/reducers/ActionCreators";
+import AssortmentCardComponent from "./AssortmentCardComponent";
+import LoadingComponent from "./LoadingComponent";
 
 const AssortmentCardsComponent = () => {
   const dispatch = useAppDispatch();

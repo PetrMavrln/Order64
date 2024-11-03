@@ -1,7 +1,7 @@
-import { useGLTF } from '@react-three/drei';
-import * as THREE from 'three';
-import { GLTF } from 'three-stdlib';
-import { IMeshComponenct } from '../../models/IMeshComponenct';
+import { useGLTF } from "@react-three/drei";
+import * as THREE from "three";
+import { GLTF } from "three-stdlib";
+import { IMeshComponenct } from "../../models/IMeshComponenct";
 
 const ColumnMeshComponent = ({ position, rotation, scale, name }: IMeshComponenct) => {
   const path = require(`../../assets/3d_models/${name}.glb`);

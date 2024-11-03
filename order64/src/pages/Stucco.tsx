@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import HeaderComponent from '../components/HeaderComponent';
-import LeftPanelComponent from '../components/LeftPanelComponent';
-import ThematicBreakComponent from '../components/ThematicBreakComponent';
-import RightPanelComponent from '../components/RightPanelComponent';
-import FooterComponent from '../components/FooterComponent';
-import styles from '../scss/css-modules/stuccoPage.module.css';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import HeaderComponent from "../components/HeaderComponent";
+import LeftPanelComponent from "../components/LeftPanelComponent";
+import ThematicBreakComponent from "../components/ThematicBreakComponent";
+import RightPanelComponent from "../components/RightPanelComponent";
+import FooterComponent from "../components/FooterComponent";
+import styles from "../scss/scss-modules/stuccoPage.module.scss";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const Stucco = () => {
   const { pathname } = useLocation();
@@ -15,7 +15,7 @@ const Stucco = () => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   }, [pathname]);
 

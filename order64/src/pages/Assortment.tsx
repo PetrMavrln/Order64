@@ -1,13 +1,13 @@
-import { useEffect } from 'react';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
-import { useLocation } from 'react-router-dom';
-import AssortmentCardsComponent from '../components/AssortmentCardsComponent';
-import FooterComponent from '../components/FooterComponent';
-import HeaderComponent from '../components/HeaderComponent';
-import LeftPanelComponent from '../components/LeftPanelComponent';
-import RightPanelComponent from '../components/RightPanelComponent';
-import ThematicBreakComponent from '../components/ThematicBreakComponent';
-import styles from '../scss/css-modules/assortmentPage.module.css';
+import { useEffect } from "react";
+import { Helmet, HelmetProvider } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
+import AssortmentCardsComponent from "../components/AssortmentCardsComponent";
+import FooterComponent from "../components/FooterComponent";
+import HeaderComponent from "../components/HeaderComponent";
+import LeftPanelComponent from "../components/LeftPanelComponent";
+import RightPanelComponent from "../components/RightPanelComponent";
+import ThematicBreakComponent from "../components/ThematicBreakComponent";
+import styles from "../scss/scss-modules/assortmentPage.module.scss";
 
 const Assortment = () => {
   const { pathname } = useLocation();
@@ -16,7 +16,7 @@ const Assortment = () => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   }, [pathname]);
 

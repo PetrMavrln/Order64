@@ -1,18 +1,18 @@
-import { useNavigate } from 'react-router-dom';
-import styles from '../scss/css-modules/header.module.css';
-import modalStyles from '../scss/css-modules/modal/modal.module.css';
-import { MAIN_ROUTE } from '../utils/consts';
+import { useNavigate } from "react-router-dom";
+import styles from "../scss/scss-modules/header.module.scss";
+import modalStyles from "../scss/scss-modules/modal/modal.module.scss";
+import { MAIN_ROUTE } from "../utils/consts";
 
-import { Suspense, lazy, useEffect, useState } from 'react';
-import lion1 from '../assets/Lion1.png';
-import lion2 from '../assets/Lion2.png';
-import logo from '../assets/logo.svg';
+import { Suspense, lazy, useEffect, useState } from "react";
+import lion1 from "../assets/Lion1.png";
+import lion2 from "../assets/Lion2.png";
+import logo from "../assets/logo.svg";
 
-import LoadingComponent from './LoadingComponent';
-import ModalComponent from './modal/ModalComponent';
+import LoadingComponent from "./LoadingComponent";
+import ModalComponent from "./modal/ModalComponent";
 
 const HeaderComponent = () => {
-  const LazyCanvasComponent = lazy(() => import('./3d_model/CanvasComponent'));
+  const LazyCanvasComponent = lazy(() => import("./3d_model/CanvasComponent"));
 
   const navigate = useNavigate();
 
@@ -20,13 +20,13 @@ const HeaderComponent = () => {
   const [showModal2, setShowModal2] = useState(false);
 
   useEffect(() => {
-    showModal1 && (document.body.style.overflow = 'hidden');
-    !showModal1 && (document.body.style.overflow = 'unset');
+    showModal1 && (document.body.style.overflow = "hidden");
+    !showModal1 && (document.body.style.overflow = "unset");
   }, [showModal1]);
 
   useEffect(() => {
-    showModal2 && (document.body.style.overflow = 'hidden');
-    !showModal2 && (document.body.style.overflow = 'unset');
+    showModal2 && (document.body.style.overflow = "hidden");
+    !showModal2 && (document.body.style.overflow = "unset");
   }, [showModal2]);
 
   const lions = [
@@ -34,13 +34,13 @@ const HeaderComponent = () => {
       position: [0.013, 0.062, -0.002],
       rotation: [Math.PI / 2, 0, -2.2],
       scale: 0.045,
-      name: 'lion1-sandstone-transformed',
+      name: "lion1-sandstone-transformed",
     },
     {
       position: [-0.009, 0.068, 0.009],
       rotation: [Math.PI / 2, 0, -4.422],
       scale: 0.045,
-      name: 'lion2-sandstone-transformed',
+      name: "lion2-sandstone-transformed",
     },
   ];
 
