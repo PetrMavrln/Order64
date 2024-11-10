@@ -16,6 +16,11 @@ const LionMeshComponent = ({ position, rotation, scale, name }: IMeshComponenct)
   };
 
   const { nodes, materials } = useGLTF(path) as GLTFResult;
+
+  // materials.SandstoneBaked.color.set(0xd5c2a5); // песочный оттенок
+  // materials.SandstoneBaked.roughness = 0.8; // матовая поверхность
+  // materials.SandstoneBaked.metalness = 0.0; // без металлического блеска
+
   // const mater = new THREE.MeshLambertMaterial({ color: 0xd5c2a5 });
   // const mesh = new THREE.Mesh(nodes.lion.geometry, materials.plaster);
   const mesh = new THREE.Mesh(nodes.lion.geometry, materials.SandstoneBaked);

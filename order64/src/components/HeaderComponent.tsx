@@ -65,6 +65,9 @@ const HeaderComponent = () => {
           <a href="mailto:order64@mail.ru" className={styles.mail}>
             Почта: order64@mail.ru
           </a>
+          <a className={styles.url} href="https://order64.ru/" target="_blank" rel="noreferrer">
+            Лепнина: order64.ru
+          </a>
         </address>
       </div>
       {showModal2 && (
