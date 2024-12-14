@@ -1,18 +1,18 @@
-import { useEffect } from 'react';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
-import { useLocation } from 'react-router-dom';
-import FooterComponent from '../components/FooterComponent';
-import HeaderComponent from '../components/HeaderComponent';
-import MainContentComponent from '../components/MainContentComponent';
+import { useEffect } from "react";
+import { Helmet, HelmetProvider } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
+import { FooterComponent } from "../../components/FooterComponent";
+import { HeaderComponent } from "../../components/HeaderComponent";
+import { MainContent } from "./components/MainContent/MainContent";
 
-const Main = () => {
+export const Main = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   }, [pathname]);
 
@@ -28,11 +28,9 @@ const Main = () => {
           <meta name="description" content="Order - художественная мастерская" />
         </Helmet>
         <HeaderComponent />
-        <MainContentComponent />
+        <MainContent />
         <FooterComponent />
       </HelmetProvider>
     </>
   );
 };
-
-export default Main;

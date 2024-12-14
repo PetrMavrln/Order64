@@ -1,12 +1,12 @@
-import axios from 'axios';
-import { IAssortmentItem } from '../../models/IAssortmentItem';
-import { IOrderSystem } from '../../models/IOrderSystem';
-import { AppDispatch } from '../store';
-import { assortmentSlice } from './AssortmentSlice';
-import { orderSystemSlice } from './OrderSystemSlice';
+import axios from "axios";
+import { IAssortmentItem } from "../../models/IAssortmentItem";
+import { IOrderSystem } from "../../pages/models/IOrderSystem";
+import { AppDispatch } from "../store";
+import { assortmentSlice } from "./AssortmentSlice";
+import { orderSystemSlice } from "./OrderSystemSlice";
 
 export const fetchAssortment = () => async (dispatch: AppDispatch) => {
-  let url = 'https://order164.ru/json/assortment.json';
+  let url = "https://order164.ru/json/assortment.json";
   // let url = 'http://127.0.0.1:5500/json/assortment.json';
   try {
     dispatch(assortmentSlice.actions.assortmentFetching());
@@ -29,7 +29,7 @@ export const fetchAssortment = () => async (dispatch: AppDispatch) => {
 // };
 
 export const fetchOrderSystem = () => async (dispatch: AppDispatch) => {
-  let url = 'https://order164.ru/json/orderSystem.json';
+  let url = "https://order164.ru/json/orderSystem.json";
   try {
     dispatch(orderSystemSlice.actions.orderSystemFetching());
     const response = await axios.get<IOrderSystem[]>(url);
@@ -37,4 +37,4 @@ export const fetchOrderSystem = () => async (dispatch: AppDispatch) => {
   } catch (e: any) {
     dispatch(orderSystemSlice.actions.orderSystemFetchingError(e.message));
   }
-}
+};

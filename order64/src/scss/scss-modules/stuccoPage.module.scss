@@ -8,26 +8,15 @@
 .container {
   position: relative;
   margin: 0 $contMargin;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   overflow: hidden;
 
   .content {
     margin: 0 auto;
     width: 635px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     background-color: #e2e2e2;
     z-index: 1;
@@ -64,11 +53,7 @@
 
         &:hover {
           &::after {
-            -webkit-transform: scaleX(1);
-            -ms-transform: scaleX(1);
             transform: scaleX(1);
-            -webkit-transform-origin: bottom left;
-            -ms-transform-origin: bottom left;
             transform-origin: bottom left;
           }
         }
@@ -77,21 +62,13 @@
           content: '';
           position: absolute;
           width: 100%;
-          -webkit-transform: scaleX(0);
-          -ms-transform: scaleX(0);
           transform: scaleX(0);
           height: 2px;
           bottom: 0;
           left: 0;
           background-color: #877065;
-          -webkit-transform-origin: bottom right;
-          -ms-transform-origin: bottom right;
           transform-origin: bottom right;
-          -webkit-transition: -webkit-transform 0.25s ease-out;
-          transition: -webkit-transform 0.25s ease-out;
-          -o-transition: transform 0.25s ease-out;
           transition: transform 0.25s ease-out;
-          transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
         }
       }
 

@@ -1,7 +1,7 @@
-import { IOrderContacts } from "../models/IOrderContacts";
-import styles from "../scss/scss-modules/orderContacts.module.scss";
+import { IOrderContacts } from "../../../../models/IOrderContacts";
+import styles from "./styles.module.scss";
 
-const OrderContactsComponent = () => {
+export const OrderContacts = () => {
   const orderContacts = [
     { id: 0, title: "Тел. Архитектор: ", number: "89085520985", name: " - Сергей" },
     { id: 1, title: "Тел. Дизайнер: ", number: "89626225577", name: " - Ольга" },
@@ -24,4 +24,3 @@ const OrderContactsComponent = () => {
     </div>
   );
 };
-export default OrderContactsComponent;

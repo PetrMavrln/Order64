@@ -1,0 +1,54 @@
+.link {
+  position: relative;
+  display: inline-block;
+  font-family: 'Playfair Display', "Times New Roman", system-ui, Tahoma, serif;
+  font-size: clamp(1.205rem, calc(0.5rem + 1.25vw), 1.215rem);
+  margin-bottom: 30px;
+  width: fit-content;
+  line-height: 1;
+
+  @media (max-width: 500px) {
+    margin-bottom: 15px;
+  }
+
+  // &:hover {
+  //   // cursor: pointer;
+
+  //   &::after {
+  //     transform: scaleX(1);
+  //     transform-origin: bottom left;
+  //   }
+  // }
+
+  &:before {
+    position: absolute;
+    content: '';
+    background: url(../../../assets/meander.svg) no-repeat center;
+    background-size: 100% 100%;
+    width: 24px;
+    height: 20px;
+    top: 0;
+    left: -34px;
+
+    @media (max-width: 500px) {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #877065;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}

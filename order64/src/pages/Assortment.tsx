@@ -2,12 +2,12 @@ import { useEffect } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 import AssortmentCardsComponent from "../components/AssortmentCardsComponent";
-import FooterComponent from "../components/FooterComponent";
-import HeaderComponent from "../components/HeaderComponent";
-import LeftPanelComponent from "../components/LeftPanelComponent";
-import RightPanelComponent from "../components/RightPanelComponent";
-import ThematicBreakComponent from "../components/ThematicBreakComponent";
+import { LeftPanel } from "../components/LeftPanel/LeftPanelComponent";
+import { RightPanel } from "../components/RightPanel/RightPanel";
+import { ThematicBreak } from "../components/ThematicBreak/ThematicBreak";
 import styles from "../scss/scss-modules/assortmentPage.module.scss";
+import { HeaderComponent } from "../components/HeaderComponent";
+import { FooterComponent } from "../components/FooterComponent";
 
 const Assortment = () => {
   const { pathname } = useLocation();
@@ -34,9 +34,9 @@ const Assortment = () => {
         <HeaderComponent />
         <div className={styles.wrapper}>
           <div className={styles.container}>
-            <LeftPanelComponent />
+            <LeftPanel />
             <main className={styles.content}>
-              <ThematicBreakComponent />
+              <ThematicBreak />
               <h2 className={styles.header}>Ассортимент колонн и цены.</h2>
               <div className={styles.description}>
                 Для Ваших интерьеров мы изготавливаем колонны исключительно из экологически чистого,
@@ -71,9 +71,9 @@ const Assortment = () => {
                 </div>
               </div>
               <AssortmentCardsComponent />
-              <ThematicBreakComponent />
+              <ThematicBreak />
             </main>
-            <RightPanelComponent />
+            <RightPanel />
           </div>
         </div>
         <FooterComponent />

@@ -1,37 +1,27 @@
-import { lazy } from 'react';
-
-// import Assortment from './pages/Assortment';
-// import Entablature from './pages/Entablature';
-// import Main from './pages/Main';
-// import Orders from './pages/Orders';
-// import Payment from './pages/Payment';
-// import Stucco from './pages/Stucco';
-import Main from './pages/Main';
+import { lazy } from "react";
+import { Main } from "./pages/Main/Main";
 import {
   ASSORTMENT_ROUTE,
+  COLONNADE_ROUTE,
   ENTABLATURE_ROUTE,
   MAIN_ROUTE,
   ORDERS_ROUTE,
   PAYMENT_ROUTE,
+  SCULPTORSSERVICES,
   STUCCO_ROUTE,
-  COLONNADE_ROUTE,
-} from './utils/consts';
+} from "./utils/consts";
 
-const LazyAssortment = lazy(() => import('./pages/Assortment'));
-const LazyEntablature = lazy(() => import('./pages/Entablature'));
-const LazyOrders = lazy(() => import('./pages/Orders'));
-const LazyPayment = lazy(() => import('./pages/Payment'));
-const LazyStucco = lazy(() => import('./pages/Stucco'));
-const LazyColonnade = lazy(() => import('./pages/Colonnade'));
-
-// export const publicRoutes = [
-//   { path: MAIN_ROUTE, Component: Main },
-//   { path: ASSORTMENT_ROUTE, Component: Assortment },
-//   { path: ENTABLATURE_ROUTE, Component: Entablature },
-//   { path: ORDERS_ROUTE, Component: Orders },
-//   { path: PAYMENT_ROUTE, Component: Payment },
-//   { path: STUCCO_ROUTE, Component: Stucco },
-// ];
+const LazyAssortment = lazy(() => import("./pages/Assortment"));
+const LazyEntablature = lazy(() => import("./pages/Entablature"));
+const LazyOrders = lazy(() => import("./pages/Orders"));
+const LazyPayment = lazy(() => import("./pages/Payment"));
+const LazyStucco = lazy(() => import("./pages/Stucco"));
+const LazyColonnade = lazy(() => import("./pages/Colonnade/Colonnade"));
+const LazySculptorsServices = lazy(() =>
+  import("./pages/Services/Services").then((module) => ({
+    default: module.Services,
+  })),
+);
 
 export const publicRoutes = [
   { path: MAIN_ROUTE, Component: Main },
@@ -41,4 +31,5 @@ export const publicRoutes = [
   { path: PAYMENT_ROUTE, Component: LazyPayment },
   { path: STUCCO_ROUTE, Component: LazyStucco },
   { path: COLONNADE_ROUTE, Component: LazyColonnade },
+  { path: SCULPTORSSERVICES, Component: LazySculptorsServices },
 ];

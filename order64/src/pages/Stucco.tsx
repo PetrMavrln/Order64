@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import HeaderComponent from "../components/HeaderComponent";
-import LeftPanelComponent from "../components/LeftPanelComponent";
-import ThematicBreakComponent from "../components/ThematicBreakComponent";
-import RightPanelComponent from "../components/RightPanelComponent";
-import FooterComponent from "../components/FooterComponent";
-import styles from "../scss/scss-modules/stuccoPage.module.scss";
+import { useEffect } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
+import { FooterComponent } from "../components/FooterComponent";
+import { HeaderComponent } from "../components/HeaderComponent";
+import { LeftPanel } from "../components/LeftPanel/LeftPanelComponent";
+import { RightPanel } from "../components/RightPanel/RightPanel";
+import { ThematicBreak } from "../components/ThematicBreak/ThematicBreak";
+import styles from "../scss/scss-modules/stuccoPage.module.scss";
 
 const Stucco = () => {
   const { pathname } = useLocation();
@@ -29,9 +29,9 @@ const Stucco = () => {
         <HeaderComponent />
         <div className={styles.wrapper}>
           <div className={styles.container}>
-            <LeftPanelComponent />
+            <LeftPanel />
             <main className={styles.content}>
-              <ThematicBreakComponent />
+              <ThematicBreak />
               <div className={styles.main}>
                 <h2 className={styles.header}>Лепнина интерьерная</h2>
                 <ol>
@@ -57,9 +57,9 @@ const Stucco = () => {
                   </a>
                 </div>
               </div>
-              <ThematicBreakComponent />
+              <ThematicBreak />
             </main>
-            <RightPanelComponent />
+            <RightPanel />
           </div>
         </div>
         <FooterComponent />

@@ -1,5 +1,5 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { IOrderSystem } from '../../models/IOrderSystem';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { IOrderSystem } from "../../pages/models/IOrderSystem";
 
 interface OrderSystemState {
   orderSystem: IOrderSystem[];
@@ -10,11 +10,11 @@ interface OrderSystemState {
 const initialState: OrderSystemState = {
   orderSystem: [],
   isLoading: false,
-  error: '',
+  error: "",
 };
 
 export const orderSystemSlice = createSlice({
-  name: 'orderSystem',
+  name: "orderSystem",
   initialState,
   reducers: {
     orderSystemFetching(state) {
@@ -22,7 +22,7 @@ export const orderSystemSlice = createSlice({
     },
     orderSystemFetchingSuccess(state, action: PayloadAction<IOrderSystem[]>) {
       state.isLoading = false;
-      state.error = '';
+      state.error = "";
       state.orderSystem = action.payload;
     },
     orderSystemFetchingError(state, action: PayloadAction<string>) {

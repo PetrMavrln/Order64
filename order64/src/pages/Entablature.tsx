@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
-import HeaderComponent from "../components/HeaderComponent";
-import FooterComponent from "../components/FooterComponent";
-import styles from "../scss/scss-modules/entablaturePage.module.scss";
-import LeftPanelComponent from "../components/LeftPanelComponent";
-import ThematicBreakComponent from "../components/ThematicBreakComponent";
-import RightPanelComponent from "../components/RightPanelComponent";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { FooterComponent } from "../components/FooterComponent";
+import { HeaderComponent } from "../components/HeaderComponent";
+import { LeftPanel } from "../components/LeftPanel/LeftPanelComponent";
+import { RightPanel } from "../components/RightPanel/RightPanel";
+import { ThematicBreak } from "../components/ThematicBreak/ThematicBreak";
+import styles from "../scss/scss-modules/entablaturePage.module.scss";
 
 const Entablature = () => {
   const { pathname } = useLocation();
@@ -23,13 +23,13 @@ const Entablature = () => {
       <HeaderComponent />
       <div className={styles.wrapper}>
         <div className={styles.container}>
-          <LeftPanelComponent />
+          <LeftPanel />
           <div className={styles.content}>
-            <ThematicBreakComponent />
+            <ThematicBreak />
             Антаблемент
-            <ThematicBreakComponent />
+            <ThematicBreak />
           </div>
-          <RightPanelComponent />
+          <RightPanel />
         </div>
       </div>
       <FooterComponent />

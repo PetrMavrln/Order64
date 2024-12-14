@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
-import PComponent from "./PComponent";
-import styles from "../scss/scss-modules/orderSystemThesis.module.scss";
-import { useAppDispatch, useAppSelector } from "../hooks/redux";
-import { fetchOrderSystem } from "../store/reducers/ActionCreators";
+import { useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "../../../../hooks/redux";
+import { fetchOrderSystem } from "../../../../store/reducers/ActionCreators";
+import { PComponent } from "./PComponent/PComponent";
+import styles from "./styles.module.scss";
 
-const OrderSystemThesisBlockComponent = () => {
+export const OrderSystemThesisBlock = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -30,5 +30,3 @@ const OrderSystemThesisBlockComponent = () => {
     </div>
   );
 };
-
-export default OrderSystemThesisBlockComponent;

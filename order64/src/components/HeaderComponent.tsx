@@ -11,7 +11,7 @@ import logo from "../assets/logo.svg";
 import LoadingComponent from "./LoadingComponent";
 import ModalComponent from "./modal/ModalComponent";
 
-const HeaderComponent = () => {
+export const HeaderComponent = () => {
   const LazyCanvasComponent = lazy(() => import("./3d_model/CanvasComponent"));
 
   const navigate = useNavigate();
@@ -111,5 +111,3 @@ const HeaderComponent = () => {
     </div>
   );
 };
-
-export default HeaderComponent;

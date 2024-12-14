@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
-import FooterComponent from "../components/FooterComponent";
-import HeaderComponent from "../components/HeaderComponent";
-import LeftPanelComponent from "../components/LeftPanelComponent";
+import { FooterComponent } from "../components/FooterComponent";
+import { HeaderComponent } from "../components/HeaderComponent";
+import { LeftPanel } from "../components/LeftPanel/LeftPanelComponent";
 import OrdersImageComponent from "../components/OrdersImageComponent";
-import RightPanelComponent from "../components/RightPanelComponent";
-import ThematicBreakComponent from "../components/ThematicBreakComponent";
+import { RightPanel } from "../components/RightPanel/RightPanel";
+import { ThematicBreak } from "../components/ThematicBreak/ThematicBreak";
 import styles from "../scss/scss-modules/ordersPage.module.scss";
 // import { useAppDispatch, useAppSelector } from '../hooks/redux';
 // import { fetchOrderPageImgs } from '../store/reducers/ActionCreators';
@@ -79,13 +79,13 @@ const Orders = () => {
         <HeaderComponent />
         <div className={styles.wrapper}>
           <div className={styles.container}>
-            <LeftPanelComponent />
+            <LeftPanel />
             <main className={styles.content}>
-              <ThematicBreakComponent />
+              <ThematicBreak />
               <div className={styles.notion}>
                 <div>Антаблемент моделируется индивидуально.</div>
               </div>
-              <ThematicBreakComponent />
+              <ThematicBreak />
               <div className={styles.main}>
                 <h2 className={styles.header}>
                   Архитектурный ордер - порядок связей архитектурных элементов.
@@ -114,7 +114,7 @@ const Orders = () => {
                 <div>База имеет плинт, торус (вал), трохилус (выкружка).</div>
                 <OrdersImageComponent img={orderPageImgs[0]} />
               </div>
-              <ThematicBreakComponent />
+              <ThematicBreak />
               <div className={styles.main}>
                 <h2 className={styles.header}>Ордерные системы</h2>
                 <h2>Греческие ордеры</h2>
@@ -170,7 +170,7 @@ const Orders = () => {
                   </div>
                 </div>
               </div>
-              <ThematicBreakComponent />
+              <ThematicBreak />
               <div className={styles.main}>
                 <h2 className={styles.header}>Элементы классического ордера</h2>
                 <div>
@@ -234,7 +234,7 @@ const Orders = () => {
                 <br />
               </div>
             </main>
-            <RightPanelComponent />
+            <RightPanel />
           </div>
         </div>
         <FooterComponent />

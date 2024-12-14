@@ -2,6 +2,7 @@
   padding: 0 5px 0 30px;
   // max-width: 539px;
   padding-bottom: 10px;
+  line-height: 1;
 
   &:nth-child(6) {
     padding-bottom: 0; //check
@@ -13,7 +14,7 @@
     font-weight: bold;
 
     &:before {
-      content: url(../../assets/meander.svg);
+      content: url(../../../../../assets/meander.svg);
       position: absolute;
       width: 15px;
       top: 0px;
