@@ -4,7 +4,7 @@ import { GLTF } from "three-stdlib";
 import { IMeshComponenct } from "../../models/IMeshComponenct";
 
 const ColumnMeshComponent = ({ position, rotation, scale, name }: IMeshComponenct) => {
-  const path = require(`../../assets/3d_models/${name}.glb`);
+  const path = `${import.meta.env.BASE_URL}3d_models/${name}.glb`;
 
   type GLTFResult = GLTF & {
     nodes: {

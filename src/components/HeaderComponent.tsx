@@ -11,22 +11,28 @@ import logo from "../assets/logo.svg";
 import LoadingComponent from "./LoadingComponent";
 import ModalComponent from "./modal/ModalComponent";
 
-export const HeaderComponent = () => {
-  const LazyCanvasComponent = lazy(() => import("./3d_model/CanvasComponent"));
+const LazyCanvasComponent = lazy(() => import("./3d_model/CanvasComponent"));
 
+export const HeaderComponent = () => {
   const navigate = useNavigate();
 
   const [showModal1, setShowModal1] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
 
   useEffect(() => {
-    showModal1 && (document.body.style.overflow = "hidden");
-    !showModal1 && (document.body.style.overflow = "unset");
+    if (showModal1) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
   }, [showModal1]);
 
   useEffect(() => {
-    showModal2 && (document.body.style.overflow = "hidden");
-    !showModal2 && (document.body.style.overflow = "unset");
+    if (showModal2) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
   }, [showModal2]);
 
   const lions = [

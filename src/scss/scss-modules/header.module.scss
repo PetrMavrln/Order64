@@ -1,5 +1,5 @@
 // @media (min-width: 1920px) {}
-@import '../variables';
+@use '../variables' as *;
 
 .wrapper {
   max-width: 1270px + $contMargin;

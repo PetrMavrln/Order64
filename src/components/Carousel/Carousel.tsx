@@ -19,12 +19,12 @@ export const Carousel = ({ title, imgs }: ICarousel) => {
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         className={styles.mySwiper}
       >
-        {imgs.map((image, index) => (
-          <SwiperSlide key={index} className={styles.swiperSlide}>
+        {imgs.map((image) => (
+          <SwiperSlide key={image.src} className={styles.swiperSlide}>
             <img
               className={styles.exmplImg}
               src={image.src}
-              alt={image.alt || `Image ${index + 1}`}
+              alt={image.alt || image.src}
               width="100%"
               height="100%"
             />

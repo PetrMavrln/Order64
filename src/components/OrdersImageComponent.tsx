@@ -4,14 +4,28 @@ import modalStyles from "../scss/scss-modules/modal/modal.module.scss";
 import styles from "../scss/scss-modules/ordersImage.module.scss";
 import ModalComponent from "./modal/ModalComponent";
 
+const orderImages = import.meta.glob<{ default: string }>("../assets/orders/*", {
+  eager: true,
+  query: "?url",
+  import: "default",
+});
+
+const getOrderImageUrl = (filename: string) => {
+  const key = Object.keys(orderImages).find((k) => k.endsWith(filename));
+  return key ? (orderImages[key] as string) : "";
+};
+
 const OrdersImageComponent = ({ img }: { img: IImage }) => {
-  const image = require(`../assets/orders/${img.img}`);
+  const image = getOrderImageUrl(img.img);
 
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    showModal && (document.body.style.overflow = "hidden");
-    !showModal && (document.body.style.overflow = "unset");
+    if (showModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
   }, [showModal]);
 
   return (

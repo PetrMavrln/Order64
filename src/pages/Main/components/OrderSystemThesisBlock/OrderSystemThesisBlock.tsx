@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../../../hooks/redux";
 import { fetchOrderSystem } from "../../../../store/reducers/ActionCreators";
 import { PComponent } from "./PComponent/PComponent";
@@ -11,11 +11,13 @@ export const OrderSystemThesisBlock = () => {
     dispatch(fetchOrderSystem());
   }, []);
 
-  const { orderSystem, isLoading } = useAppSelector((state) => state.orderSystemReducer);
+  const { orderSystem } = useAppSelector((state) => state.orderSystemReducer);
 
   return (
     <div>
-      <h2 className={styles.header}>Ордерная система - главное наследие античности</h2>
+      <h2 className={styles.header}>
+        Ордерная система - главное наследие античности
+      </h2>
       <PComponent order={orderSystem[0]} />
       <div className={styles.paragraph}>
         Давайте посмотрим, как ордер помогает нам воспринимать здание.

@@ -7,6 +7,7 @@ import { LeftPanel } from "../components/LeftPanel/LeftPanelComponent";
 import OrdersImageComponent from "../components/OrdersImageComponent";
 import { RightPanel } from "../components/RightPanel/RightPanel";
 import { ThematicBreak } from "../components/ThematicBreak/ThematicBreak";
+import image4 from "../assets/orders/3.png";
 import styles from "../scss/scss-modules/ordersPage.module.scss";
 // import { useAppDispatch, useAppSelector } from '../hooks/redux';
 // import { fetchOrderPageImgs } from '../store/reducers/ActionCreators';
@@ -62,8 +63,6 @@ const Orders = () => {
       img: "2.jpg",
     },
   ];
-
-  const image4 = require(`../assets/orders/${orderPageImgs[4].img}`);
 
   return (
     <>

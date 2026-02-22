@@ -6,14 +6,15 @@ import { assortmentSlice } from "./AssortmentSlice";
 import { orderSystemSlice } from "./OrderSystemSlice";
 
 export const fetchAssortment = () => async (dispatch: AppDispatch) => {
-  let url = "https://order164.ru/json/assortment.json";
+  const url = "https://order164.ru/json/assortment.json";
   // let url = 'http://127.0.0.1:5500/json/assortment.json';
   try {
     dispatch(assortmentSlice.actions.assortmentFetching());
     const response = await axios.get<IAssortmentItem[]>(url);
     dispatch(assortmentSlice.actions.assortmentFetchingSuccess(response.data));
-  } catch (e: any) {
-    dispatch(assortmentSlice.actions.assortmentFetchingError(e.message));
+  } catch (e: unknown) {
+    const message = e instanceof Error ? e.message : String(e);
+    dispatch(assortmentSlice.actions.assortmentFetchingError(message));
   }
 };
 
@@ -29,12 +30,13 @@ export const fetchAssortment = () => async (dispatch: AppDispatch) => {
 // };
 
 export const fetchOrderSystem = () => async (dispatch: AppDispatch) => {
-  let url = "https://order164.ru/json/orderSystem.json";
+  const url = "https://order164.ru/json/orderSystem.json";
   try {
     dispatch(orderSystemSlice.actions.orderSystemFetching());
     const response = await axios.get<IOrderSystem[]>(url);
     dispatch(orderSystemSlice.actions.orderSystemFetchingSuccess(response.data));
-  } catch (e: any) {
-    dispatch(orderSystemSlice.actions.orderSystemFetchingError(e.message));
+  } catch (e: unknown) {
+    const message = e instanceof Error ? e.message : String(e);
+    dispatch(orderSystemSlice.actions.orderSystemFetchingError(message));
   }
 };

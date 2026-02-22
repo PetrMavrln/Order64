@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import styles from "../../scss/scss-modules/modal/modal.module.scss";
 
 const ModalComponent = ({
@@ -5,9 +6,9 @@ const ModalComponent = ({
   onRequestClose,
   children,
 }: {
-  shouldShow: Boolean;
-  onRequestClose: any;
-  children: any;
+  shouldShow: boolean;
+  onRequestClose: () => void;
+  children: ReactNode;
 }) => {
   return shouldShow ? (
     <>

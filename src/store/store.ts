@@ -37,22 +37,9 @@ export const store = configureStore({
       },
     }),
 });
-//TODO setupStore для получения type AppStore ниже, пока так.
-const setupStore = () => {
-  return configureStore({
-    // reducer: rootReducer,
-    reducer: persistedReducer,
-    middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware({
-        serializableCheck: {
-          ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-        },
-      }),
-  });
-};
 
 export const persistor = persistStore(store);
 
 export type RootState = ReturnType<typeof rootReducer>;
-export type AppStore = ReturnType<typeof setupStore>;
+export type AppStore = typeof store;
 export type AppDispatch = AppStore['dispatch'];
