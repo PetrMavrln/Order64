@@ -1,19 +1,38 @@
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
+import React, { Suspense } from "react";
+import * as THREE from "three";
 import { IMeshComponenct } from "../../models/IMeshComponenct";
 import styles from "../../scss/scss-modules/3d_model/lion.module.scss";
 import LionMeshComponent from "./LionMeshComponent";
+import { Scene3DSetup } from "./Scene3DSetup";
 
-const CanvasComponent = ({ position, rotation, scale, name }: IMeshComponenct) => {
+const CanvasComponent = ({
+  position,
+  rotation,
+  scale,
+  name,
+}: IMeshComponenct) => {
   return (
-    <Canvas className={styles.canvas}>
+    <Canvas
+      className={styles.canvas}
+      shadows
+      gl={{
+        antialias: true,
+        outputColorSpace: THREE.SRGBColorSpace,
+        toneMapping: THREE.ACESFilmicToneMapping,
+        toneMappingExposure: 1,
+      }}
+    >
       <Suspense fallback={null}>
         <OrbitControls autoRotate />
-        <ambientLight intensity={1} />
-        <directionalLight position={[10, 20, 20]} intensity={2} />
-        <directionalLight position={[-10, 20, -20]} intensity={0.5} />
-        <LionMeshComponent position={position} rotation={rotation} scale={scale} name={name} />
+        <Scene3DSetup />
+        <LionMeshComponent
+          position={position}
+          rotation={rotation}
+          scale={scale}
+          name={name}
+        />
       </Suspense>
     </Canvas>
   );

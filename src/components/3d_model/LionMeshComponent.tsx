@@ -1,6 +1,8 @@
 import { useGLTF } from "@react-three/drei";
+import { useLayoutEffect, useMemo } from "react";
 import * as THREE from "three";
 import { GLTF } from "three-stdlib";
+import { setTextureColorSpace } from "../../utils/gltfTextureFix";
 import { IMeshComponenct } from "../../models/IMeshComponenct";
 
 const LionMeshComponent = ({ scale, name }: IMeshComponenct) => {
@@ -10,36 +12,38 @@ const LionMeshComponent = ({ scale, name }: IMeshComponenct) => {
     nodes: {
       lion: THREE.Mesh;
     };
-    materials: {
-      SandstoneBaked: THREE.MeshStandardMaterial;
-    };
+    scene: THREE.Group;
   };
 
-  const { nodes, materials } = useGLTF(path) as GLTFResult;
+  const { nodes, scene } = useGLTF(path) as GLTFResult;
 
-  // materials.SandstoneBaked.color.set(0xd5c2a5); // песочный оттенок
-  // materials.SandstoneBaked.roughness = 0.8; // матовая поверхность
-  // materials.SandstoneBaked.metalness = 0.0; // без металлического блеска
+  useLayoutEffect(() => {
+    setTextureColorSpace(scene);
+  }, [scene]);
 
-  // const mater = new THREE.MeshLambertMaterial({ color: 0xd5c2a5 });
-  // const mesh = new THREE.Mesh(nodes.lion.geometry, materials.plaster);
-  const mesh = new THREE.Mesh(nodes.lion.geometry, materials.SandstoneBaked);
+  const mesh = useMemo(() => {
+    const cloned = nodes.lion.clone();
+    cloned.castShadow = true;
+    cloned.receiveShadow = true;
+    return cloned;
+  }, [nodes.lion]);
+
+  const position: [number, number, number] =
+    name === "lion2-sandstone-transformed"
+      ? [0.013, 0.062, -0.002]
+      : [-0.009, 0.068, 0.009];
+
+  const rotation: [number, number, number] =
+    name === "lion2-sandstone-transformed"
+      ? [Math.PI / 2, 0, -2.2]
+      : [Math.PI / 2, 0, -4.422];
 
   return (
     <group dispose={null}>
       <primitive
         object={mesh}
-        //TODO проблема с прокидыванием пропсов position и rotation. Не считывает значения position={position}
-        position={
-          name === "lion2-sandstone-transformed"
-            ? [0.013, 0.062, -0.002]
-            : [-0.009, 0.068, 0.009]
-        }
-        rotation={
-          name === "lion2-sandstone-transformed"
-            ? [Math.PI / 2, 0, -2.2]
-            : [Math.PI / 2, 0, -4.422]
-        }
+        position={position}
+        rotation={rotation}
         scale={scale}
       />
     </group>

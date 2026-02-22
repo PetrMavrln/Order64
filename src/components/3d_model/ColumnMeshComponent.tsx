@@ -1,32 +1,44 @@
 import { useGLTF } from "@react-three/drei";
+import { useLayoutEffect, useMemo } from "react";
 import * as THREE from "three";
 import { GLTF } from "three-stdlib";
+import { setTextureColorSpace } from "../../utils/gltfTextureFix";
 import { IMeshComponenct } from "../../models/IMeshComponenct";
 
-const ColumnMeshComponent = ({ position, rotation, scale, name }: IMeshComponenct) => {
+const ColumnMeshComponent = ({
+  position,
+  rotation,
+  scale,
+  name,
+}: IMeshComponenct) => {
   const path = `${import.meta.env.BASE_URL}3d_models/${name}.glb`;
 
   type GLTFResult = GLTF & {
     nodes: {
       Column: THREE.Mesh;
     };
-    materials: {
-      SandstoneBaked: THREE.MeshStandardMaterial;
-    };
+    scene: THREE.Group;
   };
 
-  const { nodes, materials } = useGLTF(path) as GLTFResult;
-  // const mater = new THREE.MeshLambertMaterial({ color: 0xd5c2a5 });
-  // const mesh = new THREE.Mesh(nodes.lion.geometry, materials.plaster);
-  const mesh = new THREE.Mesh(nodes.Column.geometry, materials.SandstoneBaked);
+  const { nodes, scene } = useGLTF(path) as GLTFResult;
+
+  useLayoutEffect(() => {
+    setTextureColorSpace(scene);
+  }, [scene]);
+
+  const mesh = useMemo(() => {
+    const cloned = nodes.Column.clone();
+    cloned.castShadow = true;
+    cloned.receiveShadow = true;
+    return cloned;
+  }, [nodes.Column]);
 
   return (
     <group dispose={null}>
       <primitive
         object={mesh}
-        //TODO проблема с прокидыванием пропсов position и rotation. Не считывает значения position={position}
-        position={position}
-        rotation={rotation}
+        position={position as [number, number, number]}
+        rotation={rotation as [number, number, number]}
         scale={scale}
       />
     </group>
