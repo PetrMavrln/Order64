@@ -1,0 +1,11 @@
+---
+description: Unit testing requirements — every feature must have ≥80% test coverage
+alwaysApply: true
+---
+
+# Unit Testing
+
+- Каждая фича (компонент, хук, утилита, slice) должна быть покрыта unit-тестами минимум на **80%**.
+- Тесты располагаются рядом с исходным файлом: `ComponentName.test.tsx` / `utils.test.ts`.
+- **Runner**: Jest (`react-scripts test`), **Library**: React Testing Library.
+- Не используй `enzyme` и snapshot-тесты без явной необходимости.

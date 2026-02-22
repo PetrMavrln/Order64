@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "skills": {
+    "jest-react-testing": {
+      "source": "manutej/luxor-claude-marketplace",
+      "sourceType": "github",
+      "computedHash": "d38163c02ac51cdc499b654be345b660009e359bddd76a9e9f931e1e34898b39"
+    },
+    "react-best-practices": {
+      "source": "0xbigboss/claude-code",
+      "sourceType": "github",
+      "computedHash": "57fce8e3b0a0c383e011c8756f93f76810b251e7316b33902866decdf904c9f5"
+    },
+    "redux-toolkit": {
+      "source": "mindrally/skills",
+      "sourceType": "github",
+      "computedHash": "cceb1eb513c9e88802fd494d168d64029a690a5107d67b8f93ee2ff69faa061d"
+    },
+    "test": {
+      "source": "facebook/react",
+      "sourceType": "github",
+      "computedHash": "2266a066b3de38d3f82bff2e652fd809cf473e1d00390c192dc179cf25f1b885"
+    }
+  }
+}
