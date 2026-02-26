@@ -1,6 +1,11 @@
 {
   "version": 1,
   "skills": {
+    "gitlab-ci-patterns": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "computedHash": "05977e47a41b20c82909c474b5a64e8d646d6d275dafbb1e3a09b86bd1f9fed7"
+    },
     "jest-react-testing": {
       "source": "manutej/luxor-claude-marketplace",
       "sourceType": "github",
